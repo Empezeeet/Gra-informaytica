@@ -50,14 +50,6 @@ window.fullscreen = False
 enemy1 = Bots(10, 2)
 enemy1.spawn(position= (10, 2, 5))
 
-   
-
-
-
-
-
-
-
 def input(key):
     if key == 'b':
         player.position = (0, 7, 0)
@@ -73,6 +65,13 @@ def input(key):
         print( 'X:' + str(player.position.x))
         print( 'Y:' + str(player.position.y))
         print( 'Z:' + str(player.position.z))
+    if key == 'q':
+        sat_thrd = threading.Thread(target=enemy1.start_attacking_tower())
+        sat_thrd.start()
+        
+    if key == 'z':
+        print( 'X:' + str(enemy1.bot.position.x))
+        print( 'Z:' + str(enemy1.bot.position.z))
         
         
         

@@ -1,0 +1,58 @@
+DEBUG @ 23:21:17 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 23:21:17 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 23:21:18 - Processor: Apple M1
+DEBUG @ 23:21:18 - Node: Macbook.fritz.box
+DEBUG @ 23:21:18 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 23:21:18 - RunID: 7779
+DEBUG @ 23:21:18 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 23:21:18 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 23:21:18 - App Window Text: TowerDefense
+DEBUG @ 23:21:18 - App Allow Log SysInfo: True
+DEBUG @ 23:21:18 - App Max Framerate: 60
+DEBUG @ 23:21:18 - App Fullscreen: 1
+DEBUG @ 23:21:18 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM @ 23:21:18 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 23:21:18 - Loaded all packages successfully. Starting App...
+DEBUG @ 23:21:18 - Time from start to load: 1.9760210514068604s
+INFO @ 23:21:18 - Created window
+DEBUG @ 23:21:18 - Sky and ground has been created.
+DEBUG @ 23:21:18 - Player created.
+DEBUG @ 23:21:18 - Enemy tester entity has been created
+INFO @ 23:21:18 - Window parameters has been updated.
+INFO @ 23:21:18 - Enemy1 Entity has been spawned
+INFO @ 23:21:18 - Loading done in 2.5043022632598877s
+COSM @ 23:21:18 - - - - - End of Loading LOG     
+INFO @ 23:21:25 - Enemy1 moved closer.
+INFO @ 23:21:26 - Enemy1 moved closer.
+INFO @ 23:21:27 - Enemy1 moved closer.
+INFO @ 23:21:28 - Enemy1 moved closer.
+INFO @ 23:21:29 - Enemy1 moved closer.
+INFO @ 23:21:30 - Enemy1 moved closer.
+INFO @ 23:21:31 - Enemy1 moved closer.
+INFO @ 23:21:32 - Enemy1 moved closer.
+INFO @ 23:21:33 - Enemy1 moved closer.
+INFO @ 23:21:34 - Enemy1 moved closer.
+INFO @ 23:21:35 - Enemy1 moved closer.
+INFO @ 23:21:36 - Enemy1 moved closer.
+INFO @ 23:21:37 - Enemy1 moved closer.
+INFO @ 23:21:38 - Enemy1 moved closer.
+INFO @ 23:21:39 - Enemy1 moved closer.
+INFO @ 23:21:40 - Enemy1 moved closer.
+INFO @ 23:21:41 - Enemy1 moved closer.
+INFO @ 23:21:42 - Enemy1 moved closer.
+INFO @ 23:21:43 - Enemy1 moved closer.
+INFO @ 23:21:44 - Enemy1 moved closer.
+INFO @ 23:21:45 - Enemy1 moved closer.
+INFO @ 23:21:46 - Enemy1 moved closer.
+INFO @ 23:21:47 - Enemy1 moved closer.
+INFO @ 23:21:48 - Enemy1 moved closer.
+INFO @ 23:21:49 - Enemy1 moved closer.
+INFO @ 23:21:50 - Enemy1 moved closer.
+INFO @ 23:21:51 - Enemy1 moved closer.
+INFO @ 23:21:52 - Enemy1 moved closer.
+INFO @ 23:21:53 - Enemy1 moved closer.
+INFO @ 23:21:54 - Enemy1 moved closer.
+INFO @ 23:21:55 - Enemy1 moved closer.

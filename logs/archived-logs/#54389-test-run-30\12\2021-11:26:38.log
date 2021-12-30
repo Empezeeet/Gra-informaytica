@@ -1,0 +1,31 @@
+DEBUG @ 11:26:38 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 11:26:38 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 11:26:39 - Processor: Apple M1
+DEBUG @ 11:26:39 - Node: Macbook.fritz.box
+DEBUG @ 11:26:39 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 11:26:39 - RunID: 54389
+DEBUG @ 11:26:39 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 11:26:39 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 11:26:39 - App Window Text: TowerDefense
+DEBUG @ 11:26:39 - App Allow Log SysInfo: 1
+DEBUG @ 11:26:39 - App Max Framerate: 60
+DEBUG @ 11:26:39 - App Fullscreen: 1
+DEBUG @ 11:26:39 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 11:26:39 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 11:26:39 - Loaded all packages successfully. Starting App...
+DEBUG @ 11:26:39 - Time from start to end of loading essentials: 1.8113157749176025s
+INFO @ 11:26:39 - Created window
+DEBUG @ 11:26:39 - Sky and ground has been created.
+INFO @ 11:26:39 - User Interface has been created
+DEBUG @ 11:26:39 - Player created.
+INFO @ 11:26:39 - Window parameters has been updated.
+DEBUG @ 11:26:40 - Enemy tester entity has been created
+INFO @ 11:26:40 - Loading done in 2.3292808532714844s
+COSM  @ 11:26:40 - - - - - End of Loading LOG     
+DEBUG @ 11:26:46 - User pressed key: meta
+DEBUG @ 11:26:46 - User pressed key: lmeta
+DEBUG @ 11:26:47 - User pressed key: meta up
+DEBUG @ 11:26:47 - User pressed key: lmeta up

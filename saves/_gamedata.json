@@ -1,0 +1,24 @@
+{
+    
+    "app_window_text":"TowerDefense",
+    "app_allow_log_sysInfo":1,
+    "app_max_framerate":60,
+    "app_fullscreen":1,
+    "app_debug_mode":"True",
+
+    "game_max_score":9999,
+    "game_enable_easter_eggs":"True",
+
+    
+    "player_speed":0,
+    "player_jump_height":0,
+    "player_health":10,
+    "player_ammo":20,
+    
+    "bot_max_speed":10,
+    "bot_max_amount_at_once":5,
+    "__COMMENT_1":"Value above seems very little but when bot_max_speed is set to 6-10 it can be dificult to kill all bots"
+
+    
+    
+}

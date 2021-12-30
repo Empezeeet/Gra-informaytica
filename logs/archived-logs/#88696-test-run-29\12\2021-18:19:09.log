@@ -1,0 +1,66 @@
+DEBUG @ 18:19:09 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 18:19:09 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 18:19:10 - Processor: Apple M1
+DEBUG @ 18:19:10 - Node: Macbook.fritz.box
+DEBUG @ 18:19:10 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 18:19:10 - RunID: 88696
+DEBUG @ 18:19:10 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 18:19:10 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 18:19:10 - App Window Text: TowerDefense
+DEBUG @ 18:19:10 - App Allow Log SysInfo: 1
+DEBUG @ 18:19:10 - App Max Framerate: 60
+DEBUG @ 18:19:10 - App Fullscreen: 1
+DEBUG @ 18:19:10 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 18:19:10 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 18:19:10 - Loaded all packages successfully. Starting App...
+DEBUG @ 18:19:10 - Time from start to end of loading essentials: 2.0536489486694336s
+INFO @ 18:19:10 - Created window
+DEBUG @ 18:19:11 - Sky and ground has been created.
+INFO @ 18:19:11 - User Interface has been created
+DEBUG @ 18:19:11 - Player created.
+INFO @ 18:19:11 - Window parameters has been updated.
+DEBUG @ 18:19:11 - Enemy tester entity has been created
+INFO @ 18:19:11 - Enemy1's Entity has been spawned
+INFO @ 18:19:11 - Loading done in 2.5716779232025146s
+COSM  @ 18:19:11 - - - - - End of Loading LOG     
+DEBUG @ 18:19:15 - User pressed key: f
+DEBUG @ 18:19:15 - User pressed key: left mouse down
+DEBUG @ 18:19:15 - User pressed key: f up
+DEBUG @ 18:19:15 - User pressed key: left mouse up
+DEBUG @ 18:19:15 - User pressed key: left mouse down
+DEBUG @ 18:19:15 - User pressed key: double click
+DEBUG @ 18:19:15 - User pressed key: left mouse up
+DEBUG @ 18:19:15 - User pressed key: left mouse down
+DEBUG @ 18:19:15 - User pressed key: double click
+DEBUG @ 18:19:15 - User pressed key: left mouse up
+DEBUG @ 18:19:15 - User pressed key: left mouse down
+DEBUG @ 18:19:15 - User pressed key: double click
+DEBUG @ 18:19:15 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:16 - User pressed key: left mouse down
+DEBUG @ 18:19:16 - User pressed key: double click
+DEBUG @ 18:19:16 - User pressed key: left mouse up
+DEBUG @ 18:19:17 - User pressed key: meta
+DEBUG @ 18:19:17 - User pressed key: lmeta
+DEBUG @ 18:19:17 - User pressed key: meta up
+DEBUG @ 18:19:17 - User pressed key: lmeta up

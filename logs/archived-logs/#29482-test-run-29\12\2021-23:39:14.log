@@ -1,0 +1,89 @@
+DEBUG @ 23:39:14 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 23:39:14 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 23:39:15 - Processor: Apple M1
+DEBUG @ 23:39:15 - Node: Macbook.fritz.box
+DEBUG @ 23:39:15 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 23:39:15 - RunID: 29482
+DEBUG @ 23:39:15 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 23:39:15 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 23:39:15 - App Window Text: TowerDefense
+DEBUG @ 23:39:15 - App Allow Log SysInfo: 1
+DEBUG @ 23:39:15 - App Max Framerate: 60
+DEBUG @ 23:39:15 - App Fullscreen: 1
+DEBUG @ 23:39:15 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 23:39:15 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 23:39:15 - Loaded all packages successfully. Starting App...
+DEBUG @ 23:39:15 - Time from start to end of loading essentials: 1.9940552711486816s
+INFO @ 23:39:15 - Created window
+DEBUG @ 23:39:15 - Sky and ground has been created.
+INFO @ 23:39:15 - User Interface has been created
+DEBUG @ 23:39:15 - Player created.
+INFO @ 23:39:15 - Window parameters has been updated.
+DEBUG @ 23:39:15 - Enemy tester entity has been created
+INFO @ 23:39:15 - Loading done in 2.514056921005249s
+COSM  @ 23:39:15 - - - - - End of Loading LOG     
+DEBUG @ 23:39:35 - User pressed key: meta
+DEBUG @ 23:39:35 - User pressed key: lmeta
+DEBUG @ 23:39:35 - User pressed key: meta-caps_lock
+DEBUG @ 23:39:42 - User pressed key: meta up
+DEBUG @ 23:39:42 - User pressed key: lmeta up
+DEBUG @ 23:39:42 - User pressed key: q
+DEBUG @ 23:39:42 - User pressed key: q up
+DEBUG @ 23:39:48 - User pressed key: s
+DEBUG @ 23:39:48 - User pressed key: f
+DEBUG @ 23:39:48 - User pressed key: f up
+DEBUG @ 23:39:48 - User pressed key: s up
+DEBUG @ 23:39:50 - User pressed key: caps_lock up
+DEBUG @ 23:39:53 - User pressed key: f3
+DEBUG @ 23:39:54 - User pressed key: f3 up
+DEBUG @ 23:39:54 - User pressed key: w
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:55 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:56 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:57 - User pressed key: w hold
+DEBUG @ 23:39:58 - User pressed key: w hold
+DEBUG @ 23:39:58 - User pressed key: w hold
+DEBUG @ 23:39:58 - User pressed key: w hold
+DEBUG @ 23:39:58 - User pressed key: w hold
+DEBUG @ 23:39:58 - User pressed key: w hold
+DEBUG @ 23:39:58 - User pressed key: w up
+DEBUG @ 23:39:58 - User pressed key: w
+DEBUG @ 23:39:59 - User pressed key: w up
+DEBUG @ 23:39:59 - User pressed key: w
+DEBUG @ 23:39:59 - User pressed key: w up
+DEBUG @ 23:39:59 - User pressed key: w
+DEBUG @ 23:39:59 - User pressed key: w up
+DEBUG @ 23:39:59 - User pressed key: meta
+DEBUG @ 23:39:59 - User pressed key: lmeta
+DEBUG @ 23:40:00 - User pressed key: meta up
+DEBUG @ 23:40:00 - User pressed key: lmeta up

@@ -1,0 +1,59 @@
+DEBUG @ 20:31:39 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 20:31:39 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 20:31:40 - Processor: Apple M1
+DEBUG @ 20:31:40 - Node: Macbook.fritz.box
+DEBUG @ 20:31:40 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 20:31:40 - RunID: 32392
+DEBUG @ 20:31:40 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 20:31:40 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 20:31:40 - App Window Text: TowerDefense
+DEBUG @ 20:31:40 - App Allow Log SysInfo: 1
+DEBUG @ 20:31:40 - App Max Framerate: 60
+DEBUG @ 20:31:40 - App Fullscreen: 1
+DEBUG @ 20:31:40 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 20:31:40 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 20:31:40 - Loaded all packages successfully. Starting App...
+DEBUG @ 20:31:40 - Time from start to end of loading essentials: 1.783055067062378s
+INFO @ 20:31:40 - Created window
+DEBUG @ 20:31:41 - Sky and ground has been created.
+INFO @ 20:31:41 - User Interface has been created
+DEBUG @ 20:31:41 - Player created.
+INFO @ 20:31:41 - Window parameters has been updated.
+DEBUG @ 20:31:41 - Enemy tester entity has been created
+INFO @ 20:31:41 - Loading done in 2.2928640842437744s
+COSM  @ 20:31:41 - - - - - End of Loading LOG     
+DEBUG @ 20:31:43 - User pressed key: f
+DEBUG @ 20:31:43 - User pressed key: f up
+DEBUG @ 20:31:43 - User pressed key: s
+DEBUG @ 20:31:43 - User pressed key: f
+DEBUG @ 20:31:43 - User pressed key: f up
+DEBUG @ 20:31:43 - User pressed key: f
+DEBUG @ 20:31:43 - User pressed key: f up
+DEBUG @ 20:31:43 - User pressed key: f
+DEBUG @ 20:31:44 - User pressed key: f up
+DEBUG @ 20:31:44 - User pressed key: f
+DEBUG @ 20:31:44 - User pressed key: f up
+DEBUG @ 20:31:44 - User pressed key: f
+DEBUG @ 20:31:44 - User pressed key: f up
+DEBUG @ 20:31:44 - User pressed key: f
+DEBUG @ 20:31:44 - User pressed key: f up
+DEBUG @ 20:31:44 - User pressed key: f
+DEBUG @ 20:31:44 - User pressed key: f up
+DEBUG @ 20:31:44 - User pressed key: f
+DEBUG @ 20:31:45 - User pressed key: f up
+DEBUG @ 20:31:45 - User pressed key: f
+DEBUG @ 20:31:45 - User pressed key: f up
+DEBUG @ 20:31:45 - User pressed key: f
+DEBUG @ 20:31:45 - User pressed key: f up
+DEBUG @ 20:31:46 - User pressed key: s up
+DEBUG @ 20:31:46 - User pressed key: v
+DEBUG @ 20:31:46 - User pressed key: v up
+DEBUG @ 20:31:46 - User pressed key: b
+DEBUG @ 20:31:46 - User pressed key: b up
+DEBUG @ 20:31:47 - User pressed key: meta
+DEBUG @ 20:31:47 - User pressed key: lmeta
+DEBUG @ 20:31:47 - User pressed key: meta up
+DEBUG @ 20:31:47 - User pressed key: lmeta up

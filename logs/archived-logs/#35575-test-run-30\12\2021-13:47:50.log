@@ -1,0 +1,44 @@
+DEBUG @ 13:47:50 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 13:47:50 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 13:47:51 - Processor: Apple M1
+DEBUG @ 13:47:51 - Node: Macbook.fritz.box
+DEBUG @ 13:47:51 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 13:47:51 - RunID: 35575
+DEBUG @ 13:47:51 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 13:47:51 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 13:47:51 - App Window Text: TowerDefense
+DEBUG @ 13:47:51 - App Allow Log SysInfo: 1
+DEBUG @ 13:47:51 - App Max Framerate: 60
+DEBUG @ 13:47:51 - App Fullscreen: 1
+DEBUG @ 13:47:51 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 13:47:51 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 13:47:51 - Loaded all packages successfully. Starting App...
+DEBUG @ 13:47:51 - Time from start to end of loading essentials: 1.7410390377044678s
+INFO @ 13:47:51 - Created window
+DEBUG @ 13:47:51 - Sky and ground has been created.
+INFO @ 13:47:51 - User Interface has been created
+DEBUG @ 13:47:51 - Player created.
+INFO @ 13:47:51 - Window parameters has been updated.
+DEBUG @ 13:47:51 - Enemy tester entity has been created
+INFO @ 13:47:51 - Loading done in 2.2516400814056396s
+COSM  @ 13:47:51 - - - - - End of Loading LOG     
+DEBUG @ 13:47:53 - User pressed key: q
+DEBUG @ 13:47:53 - User pressed key: q up
+DEBUG @ 13:47:55 - User pressed key: e
+DEBUG @ 13:47:55 - User pressed key: e up
+DEBUG @ 13:47:55 - User pressed key: e
+DEBUG @ 13:47:55 - User pressed key: e up
+DEBUG @ 13:47:55 - User pressed key: e
+DEBUG @ 13:47:55 - User pressed key: e up
+DEBUG @ 13:47:56 - User pressed key: e
+DEBUG @ 13:47:56 - User pressed key: e up
+DEBUG @ 13:47:56 - User pressed key: e
+DEBUG @ 13:47:56 - User pressed key: e up
+DEBUG @ 13:47:56 - User pressed key: e
+DEBUG @ 13:47:56 - User pressed key: e up
+DEBUG @ 13:47:56 - User pressed key: e
+DEBUG @ 13:47:56 - User pressed key: e up
+DEBUG @ 13:47:56 - User pressed key: e

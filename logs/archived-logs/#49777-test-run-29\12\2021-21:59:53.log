@@ -1,0 +1,39 @@
+DEBUG @ 21:59:53 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 21:59:53 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 21:59:55 - Processor: Apple M1
+DEBUG @ 21:59:55 - Node: Macbook.fritz.box
+DEBUG @ 21:59:55 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 21:59:55 - RunID: 49777
+DEBUG @ 21:59:55 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 21:59:55 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 21:59:55 - App Window Text: TowerDefense
+DEBUG @ 21:59:55 - App Allow Log SysInfo: 1
+DEBUG @ 21:59:55 - App Max Framerate: 60
+DEBUG @ 21:59:55 - App Fullscreen: 1
+DEBUG @ 21:59:55 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 21:59:55 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 21:59:55 - Loaded all packages successfully. Starting App...
+DEBUG @ 21:59:55 - Time from start to end of loading essentials: 1.2083659172058105s
+INFO @ 21:59:55 - Created window
+DEBUG @ 21:59:55 - Sky and ground has been created.
+INFO @ 21:59:55 - User Interface has been created
+DEBUG @ 21:59:55 - Player created.
+INFO @ 21:59:55 - Window parameters has been updated.
+DEBUG @ 21:59:55 - Enemy tester entity has been created
+INFO @ 21:59:55 - Loading done in 1.215075969696045s
+COSM  @ 21:59:55 - - - - - End of Loading LOG     
+FATAL @ 21:59:55 - This shouldn't show up. If you can see this in logs you should check for gliches
+DEBUG @ 21:59:55 - User pressed key: f5 up
+DEBUG @ 21:59:57 - User pressed key: left mouse down
+DEBUG @ 21:59:57 - User pressed key: left mouse up
+DEBUG @ 21:59:58 - User pressed key: meta
+DEBUG @ 21:59:58 - User pressed key: lmeta
+DEBUG @ 22:00:00 - User pressed key: meta-mouse1
+DEBUG @ 22:00:00 - User pressed key: left mouse up
+DEBUG @ 22:00:01 - User pressed key: meta up
+DEBUG @ 22:00:01 - User pressed key: lmeta up
+DEBUG @ 22:00:04 - User pressed key: x
+INFO @ 22:00:04 - Exited app as userExit()

@@ -1,0 +1,188 @@
+DEBUG @ 23:35:45 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 23:35:45 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 23:35:46 - Processor: Apple M1
+DEBUG @ 23:35:46 - Node: Macbook.fritz.box
+DEBUG @ 23:35:46 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 23:35:46 - RunID: 49112
+DEBUG @ 23:35:46 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 23:35:46 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 23:35:46 - App Window Text: TowerDefense
+DEBUG @ 23:35:46 - App Allow Log SysInfo: 1
+DEBUG @ 23:35:46 - App Max Framerate: 60
+DEBUG @ 23:35:46 - App Fullscreen: 1
+DEBUG @ 23:35:46 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 23:35:46 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 23:35:46 - Loaded all packages successfully. Starting App...
+DEBUG @ 23:35:46 - Time from start to end of loading essentials: 1.8815171718597412s
+INFO @ 23:35:46 - Created window
+DEBUG @ 23:35:46 - Sky and ground has been created.
+INFO @ 23:35:46 - User Interface has been created
+DEBUG @ 23:35:46 - Player created.
+INFO @ 23:35:46 - Window parameters has been updated.
+DEBUG @ 23:35:46 - Enemy tester entity has been created
+INFO @ 23:35:46 - Loading done in 2.387878894805908s
+COSM  @ 23:35:46 - - - - - End of Loading LOG     
+DEBUG @ 23:35:48 - User pressed key: q
+DEBUG @ 23:35:48 - User pressed key: q up
+DEBUG @ 23:35:51 - User pressed key: f
+DEBUG @ 23:35:51 - User pressed key: f up
+DEBUG @ 23:35:51 - User pressed key: s
+DEBUG @ 23:35:52 - User pressed key: s hold
+DEBUG @ 23:35:52 - User pressed key: s hold
+DEBUG @ 23:35:52 - User pressed key: s hold
+DEBUG @ 23:35:52 - User pressed key: s hold
+DEBUG @ 23:35:52 - User pressed key: s hold
+DEBUG @ 23:35:52 - User pressed key: s up
+DEBUG @ 23:35:52 - User pressed key: w
+DEBUG @ 23:35:53 - User pressed key: w up
+DEBUG @ 23:35:53 - User pressed key: s
+DEBUG @ 23:35:53 - User pressed key: s hold
+DEBUG @ 23:35:53 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s hold
+DEBUG @ 23:35:54 - User pressed key: s up
+DEBUG @ 23:35:54 - User pressed key: d
+DEBUG @ 23:35:54 - User pressed key: d up
+DEBUG @ 23:35:54 - User pressed key: w
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:55 - User pressed key: w hold
+DEBUG @ 23:35:56 - User pressed key: w hold
+DEBUG @ 23:35:56 - User pressed key: f
+DEBUG @ 23:35:56 - User pressed key: f up
+DEBUG @ 23:35:56 - User pressed key: f
+DEBUG @ 23:35:56 - User pressed key: f up
+DEBUG @ 23:35:56 - User pressed key: a
+DEBUG @ 23:35:56 - User pressed key: f
+DEBUG @ 23:35:56 - User pressed key: f up
+DEBUG @ 23:35:56 - User pressed key: f
+DEBUG @ 23:35:56 - User pressed key: f up
+DEBUG @ 23:35:56 - User pressed key: f
+DEBUG @ 23:35:56 - User pressed key: f up
+DEBUG @ 23:35:57 - User pressed key: f
+DEBUG @ 23:35:57 - User pressed key: f up
+DEBUG @ 23:35:57 - User pressed key: f
+DEBUG @ 23:35:57 - User pressed key: f up
+DEBUG @ 23:35:57 - User pressed key: w up
+DEBUG @ 23:35:57 - User pressed key: a up
+DEBUG @ 23:35:57 - User pressed key: s
+DEBUG @ 23:35:58 - User pressed key: f
+DEBUG @ 23:35:58 - User pressed key: f up
+DEBUG @ 23:35:58 - User pressed key: d
+DEBUG @ 23:35:58 - User pressed key: s up
+DEBUG @ 23:35:58 - User pressed key: d hold
+DEBUG @ 23:35:58 - User pressed key: w
+DEBUG @ 23:35:59 - User pressed key: w hold
+DEBUG @ 23:35:59 - User pressed key: w hold
+DEBUG @ 23:35:59 - User pressed key: w hold
+DEBUG @ 23:35:59 - User pressed key: d up
+DEBUG @ 23:35:59 - User pressed key: w up
+DEBUG @ 23:36:03 - User pressed key: s
+DEBUG @ 23:36:03 - User pressed key: s hold
+DEBUG @ 23:36:03 - User pressed key: s up
+DEBUG @ 23:36:04 - User pressed key: w
+DEBUG @ 23:36:04 - User pressed key: a
+DEBUG @ 23:36:04 - User pressed key: a hold
+DEBUG @ 23:36:04 - User pressed key: a hold
+DEBUG @ 23:36:04 - User pressed key: a hold
+DEBUG @ 23:36:04 - User pressed key: a hold
+DEBUG @ 23:36:04 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a hold
+DEBUG @ 23:36:05 - User pressed key: a up
+DEBUG @ 23:36:05 - User pressed key: a
+DEBUG @ 23:36:06 - User pressed key: a up
+DEBUG @ 23:36:07 - User pressed key: w up
+DEBUG @ 23:36:07 - User pressed key: w
+DEBUG @ 23:36:07 - User pressed key: w up
+DEBUG @ 23:36:09 - User pressed key: f3
+DEBUG @ 23:36:09 - User pressed key: f3 up
+DEBUG @ 23:36:10 - User pressed key: a
+DEBUG @ 23:36:10 - User pressed key: a up
+DEBUG @ 23:36:10 - User pressed key: a
+DEBUG @ 23:36:10 - User pressed key: w
+DEBUG @ 23:36:10 - User pressed key: a up
+DEBUG @ 23:36:11 - User pressed key: w up
+DEBUG @ 23:36:12 - User pressed key: w
+DEBUG @ 23:36:12 - User pressed key: a
+DEBUG @ 23:36:12 - User pressed key: w up
+DEBUG @ 23:36:12 - User pressed key: a up
+DEBUG @ 23:36:12 - User pressed key: d
+DEBUG @ 23:36:13 - User pressed key: w
+DEBUG @ 23:36:13 - User pressed key: d up
+DEBUG @ 23:36:13 - User pressed key: a
+DEBUG @ 23:36:13 - User pressed key: a up
+DEBUG @ 23:36:13 - User pressed key: a
+DEBUG @ 23:36:14 - User pressed key: a up
+DEBUG @ 23:36:14 - User pressed key: a
+DEBUG @ 23:36:14 - User pressed key: a up
+DEBUG @ 23:36:14 - User pressed key: d
+DEBUG @ 23:36:14 - User pressed key: w up
+DEBUG @ 23:36:15 - User pressed key: d hold
+DEBUG @ 23:36:15 - User pressed key: d hold
+DEBUG @ 23:36:15 - User pressed key: w
+DEBUG @ 23:36:15 - User pressed key: d up
+DEBUG @ 23:36:15 - User pressed key: a
+DEBUG @ 23:36:15 - User pressed key: a up
+DEBUG @ 23:36:15 - User pressed key: d
+DEBUG @ 23:36:16 - User pressed key: d up
+DEBUG @ 23:36:16 - User pressed key: a
+DEBUG @ 23:36:16 - User pressed key: w up
+DEBUG @ 23:36:16 - User pressed key: a hold
+DEBUG @ 23:36:16 - User pressed key: s
+DEBUG @ 23:36:16 - User pressed key: a up
+DEBUG @ 23:36:17 - User pressed key: s hold
+DEBUG @ 23:36:17 - User pressed key: s hold
+DEBUG @ 23:36:17 - User pressed key: d
+DEBUG @ 23:36:17 - User pressed key: d hold
+DEBUG @ 23:36:17 - User pressed key: s up
+DEBUG @ 23:36:17 - User pressed key: d hold
+DEBUG @ 23:36:17 - User pressed key: d hold
+DEBUG @ 23:36:18 - User pressed key: d hold
+DEBUG @ 23:36:18 - User pressed key: d hold
+DEBUG @ 23:36:18 - User pressed key: d hold
+DEBUG @ 23:36:18 - User pressed key: d hold
+DEBUG @ 23:36:18 - User pressed key: w
+DEBUG @ 23:36:18 - User pressed key: w hold
+DEBUG @ 23:36:18 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w hold
+DEBUG @ 23:36:19 - User pressed key: w up
+DEBUG @ 23:36:20 - User pressed key: d up
+DEBUG @ 23:36:20 - User pressed key: meta
+DEBUG @ 23:36:20 - User pressed key: lmeta
+DEBUG @ 23:36:21 - User pressed key: meta-x
+DEBUG @ 23:36:21 - User pressed key: meta up
+DEBUG @ 23:36:21 - User pressed key: lmeta up
+DEBUG @ 23:36:21 - User pressed key: x up
+DEBUG @ 23:36:22 - User pressed key: x
+INFO @ 23:36:22 - Exited app as userExit()

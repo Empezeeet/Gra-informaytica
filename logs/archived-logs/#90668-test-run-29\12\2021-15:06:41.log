@@ -1,0 +1,44 @@
+DEBUG @ 15:06:41 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 15:06:41 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 15:06:42 - Processor: Apple M1
+DEBUG @ 15:06:42 - Node: Macbook.fritz.box
+DEBUG @ 15:06:42 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 15:06:42 - RunID: 90668
+DEBUG @ 15:06:42 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 15:06:42 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 15:06:42 - App Window Text: TowerDefense
+DEBUG @ 15:06:42 - App Allow Log SysInfo: 1
+DEBUG @ 15:06:42 - App Max Framerate: 60
+DEBUG @ 15:06:42 - App Fullscreen: 1
+DEBUG @ 15:06:42 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM @ 15:06:42 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 15:06:42 - Loaded all packages successfully. Starting App...
+DEBUG @ 15:06:42 - Time from start to end of loading essentials: 1.8305389881134033s
+INFO @ 15:06:42 - Created window
+DEBUG @ 15:06:42 - Sky and ground has been created.
+DEBUG @ 15:06:42 - Player created.
+DEBUG @ 15:06:42 - Enemy tester entity has been created
+INFO @ 15:06:42 - Window parameters has been updated.
+INFO @ 15:06:42 - Enemy1 Entity has been spawned
+INFO @ 15:06:42 - Loading done in 2.3542098999023438s
+COSM @ 15:06:42 - - - - - End of Loading LOG     
+DEBUG @ 15:07:03 - User pressed key: escape up
+DEBUG @ 15:07:05 - User pressed key: meta
+DEBUG @ 15:07:05 - User pressed key: lmeta
+DEBUG @ 15:07:05 - User pressed key: meta up
+DEBUG @ 15:07:05 - User pressed key: lmeta up
+DEBUG @ 15:07:08 - User pressed key: meta
+DEBUG @ 15:07:08 - User pressed key: lmeta
+DEBUG @ 15:07:17 - User pressed key: meta up
+DEBUG @ 15:07:17 - User pressed key: lmeta up
+DEBUG @ 15:07:20 - User pressed key: meta
+DEBUG @ 15:07:20 - User pressed key: lmeta
+DEBUG @ 15:07:20 - User pressed key: meta up
+DEBUG @ 15:07:20 - User pressed key: lmeta up
+DEBUG @ 15:07:27 - User pressed key: meta
+DEBUG @ 15:07:27 - User pressed key: lmeta
+DEBUG @ 15:07:27 - User pressed key: meta up
+DEBUG @ 15:07:27 - User pressed key: lmeta up

@@ -1,0 +1,19 @@
+DEBUG @ 18:04:36 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 18:04:36 - App Window Text: TowerDefense
+DEBUG @ 18:04:36 - App Allow Log SysInfo: True
+DEBUG @ 18:04:36 - App Max Framerate: 60
+DEBUG @ 18:04:36 - App Fullscreen: 1
+DEBUG @ 18:04:36 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM @ 18:04:36 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 18:04:36 - Loaded all packages successfully. Starting App...
+DEBUG @ 18:04:36 - Time from start to load: 0.4242098331451416s
+INFO @ 18:04:44 - Created window
+DEBUG @ 18:04:44 - Sky and ground has been created.
+DEBUG @ 18:04:44 - Player created.
+DEBUG @ 18:04:44 - Enemy tester entity has been created
+INFO @ 18:04:44 - Window parameters has been updated.
+INFO @ 18:04:44 - Enemy1 Entity has been spawned
+INFO @ 18:04:44 - Loading done in 8.309746026992798s
+COSM @ 18:04:44 - - - - - End of Loading LOG     

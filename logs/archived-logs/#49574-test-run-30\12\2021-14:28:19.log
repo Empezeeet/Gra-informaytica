@@ -1,0 +1,67 @@
+DEBUG @ 14:28:19 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 14:28:19 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 14:28:20 - Processor: Apple M1
+DEBUG @ 14:28:20 - Node: Macbook.fritz.box
+DEBUG @ 14:28:20 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 14:28:20 - RunID: 49574
+DEBUG @ 14:28:20 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 14:28:20 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 14:28:20 - App Window Text: TowerDefense
+DEBUG @ 14:28:20 - App Allow Log SysInfo: 1
+DEBUG @ 14:28:20 - App Max Framerate: 60
+DEBUG @ 14:28:20 - App Fullscreen: 1
+DEBUG @ 14:28:20 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 14:28:20 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 14:28:20 - Loaded all packages successfully. Starting App...
+DEBUG @ 14:28:20 - Time from start to end of loading essentials: 1.797116756439209s
+INFO @ 14:28:20 - Created window
+DEBUG @ 14:28:21 - Sky and ground has been created.
+INFO @ 14:28:21 - User Interface has been created
+DEBUG @ 14:28:21 - Player created.
+INFO @ 14:28:21 - Window parameters has been updated.
+DEBUG @ 14:28:21 - Enemy tester entity has been created
+INFO @ 14:28:21 - Loading done in 2.311119794845581s
+COSM  @ 14:28:21 - - - - - End of Loading LOG     
+DEBUG @ 14:28:22 - User pressed key: z
+DEBUG @ 14:28:22 - User pressed key: z up
+DEBUG @ 14:28:29 - User pressed key: meta
+DEBUG @ 14:28:29 - User pressed key: lmeta
+DEBUG @ 14:29:28 - User pressed key: meta up
+DEBUG @ 14:29:28 - User pressed key: lmeta up
+DEBUG @ 14:29:34 - User pressed key: f3
+DEBUG @ 14:29:34 - User pressed key: f3 up
+DEBUG @ 14:30:26 - User pressed key: z
+DEBUG @ 14:30:27 - User pressed key: z up
+DEBUG @ 14:30:28 - User pressed key: z
+DEBUG @ 14:30:28 - User pressed key: z up
+DEBUG @ 14:30:28 - User pressed key: z
+DEBUG @ 14:30:28 - User pressed key: z up
+DEBUG @ 14:30:29 - User pressed key: z
+DEBUG @ 14:30:29 - User pressed key: z up
+DEBUG @ 14:30:29 - User pressed key: z
+DEBUG @ 14:30:29 - User pressed key: z up
+DEBUG @ 14:30:29 - User pressed key: z
+DEBUG @ 14:30:29 - User pressed key: z up
+DEBUG @ 14:30:29 - User pressed key: z
+DEBUG @ 14:30:29 - User pressed key: z up
+DEBUG @ 14:30:29 - User pressed key: z
+DEBUG @ 14:30:30 - User pressed key: z up
+DEBUG @ 14:30:30 - User pressed key: z
+DEBUG @ 14:30:30 - User pressed key: z up
+DEBUG @ 14:30:30 - User pressed key: z
+DEBUG @ 14:30:30 - User pressed key: z up
+DEBUG @ 14:30:30 - User pressed key: z
+DEBUG @ 14:30:30 - User pressed key: z up
+DEBUG @ 14:30:31 - User pressed key: z
+DEBUG @ 14:30:31 - User pressed key: z up
+DEBUG @ 14:30:31 - User pressed key: z
+DEBUG @ 14:30:31 - User pressed key: z up
+DEBUG @ 14:30:32 - User pressed key: z
+DEBUG @ 14:30:32 - User pressed key: z up
+DEBUG @ 14:30:32 - User pressed key: z
+DEBUG @ 14:30:33 - User pressed key: z up
+DEBUG @ 14:30:33 - User pressed key: x
+INFO @ 14:30:34 - Exited app as userExit()

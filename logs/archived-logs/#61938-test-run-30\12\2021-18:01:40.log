@@ -1,0 +1,53 @@
+DEBUG @ 18:01:40 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 18:01:40 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 18:01:41 - Processor: Apple M1
+DEBUG @ 18:01:41 - Node: Macbook.fritz.box
+DEBUG @ 18:01:41 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 18:01:41 - RunID: 61938
+DEBUG @ 18:01:41 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 18:01:41 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 18:01:41 - App Window Text: TowerDefense
+DEBUG @ 18:01:41 - App Allow Log SysInfo: 1
+DEBUG @ 18:01:41 - App Max Framerate: 60
+DEBUG @ 18:01:41 - App Fullscreen: 1
+DEBUG @ 18:01:41 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 18:01:41 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 18:01:41 - Loaded all packages successfully. Starting App...
+DEBUG @ 18:01:41 - Time from start to end of loading essentials: 1.9010009765625s
+INFO @ 18:01:41 - Created window
+DEBUG @ 18:01:41 - Sky and ground has been created.
+INFO @ 18:01:41 - User Interface has been created
+DEBUG @ 18:01:41 - Player created.
+INFO @ 18:01:41 - Window parameters has been updated.
+DEBUG @ 18:01:41 - Enemy tester entity has been created
+INFO @ 18:01:41 - Loading done in 2.416412115097046s
+COSM  @ 18:01:41 - - - - - End of Loading LOG     
+DEBUG @ 18:01:58 - User pressed key: r
+DEBUG @ 18:01:58 - User pressed key: r up
+DEBUG @ 18:01:59 - User pressed key: v
+DEBUG @ 18:01:59 - User pressed key: v up
+DEBUG @ 18:02:00 - User pressed key: r
+DEBUG @ 18:02:00 - User pressed key: r up
+DEBUG @ 18:02:01 - User pressed key: r
+DEBUG @ 18:02:01 - User pressed key: r up
+DEBUG @ 18:02:01 - User pressed key: r
+DEBUG @ 18:02:01 - User pressed key: r up
+DEBUG @ 18:02:01 - User pressed key: meta
+DEBUG @ 18:02:01 - User pressed key: lmeta
+DEBUG @ 18:02:01 - User pressed key: meta up
+DEBUG @ 18:02:01 - User pressed key: lmeta up
+DEBUG @ 18:05:06 - User pressed key: r
+DEBUG @ 18:05:06 - User pressed key: r up
+DEBUG @ 18:05:07 - User pressed key: r
+DEBUG @ 18:05:07 - User pressed key: r up
+DEBUG @ 18:05:07 - User pressed key: r
+DEBUG @ 18:05:07 - User pressed key: r up
+DEBUG @ 18:05:07 - User pressed key: r
+DEBUG @ 18:05:07 - User pressed key: r up
+DEBUG @ 18:05:07 - User pressed key: r
+DEBUG @ 18:05:07 - User pressed key: r up
+DEBUG @ 18:05:08 - User pressed key: x
+INFO @ 18:05:08 - Exited app as userExit()

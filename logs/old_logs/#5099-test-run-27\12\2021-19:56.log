@@ -1,0 +1,10 @@
+COSM @ 19:56:56 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 19:56:56 - Loaded all packages successfully. Starting App...
+INFO @ 19:56:56 - Created window
+DEBUG @ 19:56:56 - Sky and ground has been created.
+DEBUG @ 19:56:56 - Player created.
+DEBUG @ 19:56:57 - Enemy tester entity has been created
+INFO @ 19:56:57 - Window parameters has been updated.
+INFO @ 19:56:57 - Enemy1 Entity has been spawned
+INFO @ 19:56:57 - Loading done in 0.726294994354248s
+COSM @ 19:56:57 - - - - - End of Loading LOG     

@@ -1,0 +1,53 @@
+DEBUG @ 17:24:00 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 17:24:00 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 17:24:02 - Processor: Apple M1
+DEBUG @ 17:24:02 - Node: Macbook.fritz.box
+DEBUG @ 17:24:02 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 17:24:02 - RunID: 17651
+DEBUG @ 17:24:02 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 17:24:02 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 17:24:02 - App Window Text: TowerDefense
+DEBUG @ 17:24:02 - App Allow Log SysInfo: 1
+DEBUG @ 17:24:02 - App Max Framerate: 60
+DEBUG @ 17:24:02 - App Fullscreen: 1
+DEBUG @ 17:24:02 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM @ 17:24:02 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 17:24:02 - Loaded all packages successfully. Starting App...
+DEBUG @ 17:24:02 - Time from start to end of loading essentials: 1.8084650039672852s
+INFO @ 17:24:02 - Created window
+DEBUG @ 17:24:02 - Sky and ground has been created.
+INFO @ 17:24:02 - User Interface has been created
+DEBUG @ 17:24:02 - Player created.
+INFO @ 17:24:02 - Window parameters has been updated.
+DEBUG @ 17:24:02 - Enemy tester entity has been created
+INFO @ 17:24:02 - Enemy1's Entity has been spawned
+INFO @ 17:24:02 - Loading done in 2.3294930458068848s
+COSM @ 17:24:02 - - - - - End of Loading LOG     
+DEBUG @ 17:24:02 - User pressed key: meta
+DEBUG @ 17:24:02 - User pressed key: lmeta
+DEBUG @ 17:24:02 - User pressed key: meta up
+DEBUG @ 17:24:02 - User pressed key: lmeta up
+DEBUG @ 17:24:33 - User pressed key: control
+DEBUG @ 17:24:33 - User pressed key: left control
+DEBUG @ 17:24:33 - User pressed key: control up
+DEBUG @ 17:24:33 - User pressed key: left control up
+DEBUG @ 17:24:34 - User pressed key: f6
+DEBUG @ 17:24:34 - User pressed key: f6 up
+DEBUG @ 17:24:34 - User pressed key: f6
+DEBUG @ 17:24:34 - User pressed key: f6 up
+DEBUG @ 17:24:34 - User pressed key: f6
+DEBUG @ 17:24:34 - User pressed key: f6 up
+DEBUG @ 17:24:35 - User pressed key: f6
+DEBUG @ 17:24:35 - User pressed key: f6 up
+DEBUG @ 17:24:36 - User pressed key: f7
+DEBUG @ 17:24:36 - User pressed key: f7 up
+DEBUG @ 17:24:36 - User pressed key: f7
+DEBUG @ 17:24:36 - User pressed key: f7 up
+DEBUG @ 17:24:36 - User pressed key: f7
+DEBUG @ 17:24:36 - User pressed key: f7 up
+DEBUG @ 17:24:36 - User pressed key: f7
+DEBUG @ 17:24:37 - User pressed key: f7 up
+DEBUG @ 17:24:37 - User pressed key: f5

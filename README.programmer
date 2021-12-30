@@ -1,0 +1,10 @@
+Przeczytaj to jeśli jesteś osobą która pracuje nad tym projektem.
+                                                            -Empezeeet
+
+
+1. Każdy skrypt stworzony przez nas musi byc nazywany w skrypcie jako __scriptName. Przykład:
+    import scripts.script as __script
+
+
+
+

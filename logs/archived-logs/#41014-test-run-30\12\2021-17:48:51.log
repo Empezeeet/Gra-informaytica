@@ -1,0 +1,28 @@
+DEBUG @ 17:48:51 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 17:48:51 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 17:48:52 - Processor: Apple M1
+DEBUG @ 17:48:52 - Node: Macbook.fritz.box
+DEBUG @ 17:48:52 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 17:48:52 - RunID: 41014
+DEBUG @ 17:48:52 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 17:48:52 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 17:48:52 - App Window Text: TowerDefense
+DEBUG @ 17:48:52 - App Allow Log SysInfo: 1
+DEBUG @ 17:48:52 - App Max Framerate: 60
+DEBUG @ 17:48:52 - App Fullscreen: 1
+DEBUG @ 17:48:52 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 17:48:52 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 17:48:52 - Loaded all packages successfully. Starting App...
+DEBUG @ 17:48:52 - Time from start to end of loading essentials: 1.8455231189727783s
+INFO @ 17:48:52 - Created window
+DEBUG @ 17:48:53 - Sky and ground has been created.
+INFO @ 17:48:53 - User Interface has been created
+DEBUG @ 17:48:53 - Player created.
+INFO @ 17:48:53 - Window parameters has been updated.
+DEBUG @ 17:48:53 - Enemy tester entity has been created
+INFO @ 17:48:53 - Loading done in 2.3532700538635254s
+COSM  @ 17:48:53 - - - - - End of Loading LOG     
+DEBUG @ 17:48:55 - User pressed key: e

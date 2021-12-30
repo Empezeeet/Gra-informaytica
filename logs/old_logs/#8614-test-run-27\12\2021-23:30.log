@@ -1,0 +1,18 @@
+DEBUG @ 23:30:28 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 23:30:28 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 23:30:29 - Processor: Apple M1
+DEBUG @ 23:30:29 - Node: Macbook.fritz.box
+DEBUG @ 23:30:29 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 23:30:29 - - - - - - - - SYSTEM INFO - - - - - - -
+
+
+COSM @ 23:30:29 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 23:30:29 - Loaded all packages successfully. Starting App...
+INFO @ 23:30:29 - Created window
+DEBUG @ 23:30:30 - Sky and ground has been created.
+DEBUG @ 23:30:30 - Player created.
+DEBUG @ 23:30:30 - Enemy tester entity has been created
+INFO @ 23:30:30 - Window parameters has been updated.
+INFO @ 23:30:30 - Enemy1 Entity has been spawned
+INFO @ 23:30:30 - Loading done in 2.2199859619140625s
+COSM @ 23:30:30 - - - - - End of Loading LOG     

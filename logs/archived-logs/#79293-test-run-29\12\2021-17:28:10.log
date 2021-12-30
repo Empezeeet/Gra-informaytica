@@ -1,0 +1,30 @@
+DEBUG @ 17:28:10 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 17:28:10 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 17:28:11 - Processor: Apple M1
+DEBUG @ 17:28:11 - Node: Macbook.fritz.box
+DEBUG @ 17:28:11 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 17:28:11 - RunID: 79293
+DEBUG @ 17:28:11 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 17:28:11 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 17:28:11 - App Window Text: TowerDefense
+DEBUG @ 17:28:11 - App Allow Log SysInfo: 1
+DEBUG @ 17:28:11 - App Max Framerate: 60
+DEBUG @ 17:28:11 - App Fullscreen: 1
+DEBUG @ 17:28:11 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM @ 17:28:11 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 17:28:11 - Loaded all packages successfully. Starting App...
+DEBUG @ 17:28:11 - Time from start to end of loading essentials: 1.7857930660247803s
+INFO @ 17:28:11 - Created window
+DEBUG @ 17:28:11 - Sky and ground has been created.
+INFO @ 17:28:11 - User Interface has been created
+DEBUG @ 17:28:11 - Player created.
+INFO @ 17:28:11 - Window parameters has been updated.
+DEBUG @ 17:28:12 - Enemy tester entity has been created
+INFO @ 17:28:12 - Enemy1's Entity has been spawned
+INFO @ 17:28:12 - Loading done in 2.2963268756866455s
+COSM @ 17:28:12 - - - - - End of Loading LOG     
+DEBUG @ 17:28:15 - User pressed key: x
+INFO @ 17:28:15 - Exited app as userExit()

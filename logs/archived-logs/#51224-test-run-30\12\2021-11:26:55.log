@@ -1,0 +1,728 @@
+DEBUG @ 11:26:55 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 11:26:55 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 11:26:56 - Processor: Apple M1
+DEBUG @ 11:26:56 - Node: Macbook.fritz.box
+DEBUG @ 11:26:56 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 11:26:56 - RunID: 51224
+DEBUG @ 11:26:56 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 11:26:56 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 11:26:56 - App Window Text: TowerDefense
+DEBUG @ 11:26:56 - App Allow Log SysInfo: 1
+DEBUG @ 11:26:56 - App Max Framerate: 60
+DEBUG @ 11:26:56 - App Fullscreen: 1
+DEBUG @ 11:26:56 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 11:26:56 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 11:26:56 - Loaded all packages successfully. Starting App...
+DEBUG @ 11:26:56 - Time from start to end of loading essentials: 1.7743971347808838s
+INFO @ 11:26:56 - Created window
+DEBUG @ 11:26:56 - Sky and ground has been created.
+INFO @ 11:26:56 - User Interface has been created
+DEBUG @ 11:26:56 - Player created.
+INFO @ 11:26:56 - Window parameters has been updated.
+DEBUG @ 11:26:57 - Enemy tester entity has been created
+INFO @ 11:26:57 - Loading done in 2.2888782024383545s
+COSM  @ 11:26:57 - - - - - End of Loading LOG     
+DEBUG @ 11:27:00 - User pressed key: q
+DEBUG @ 11:27:00 - User pressed key: q up
+DEBUG @ 11:27:01 - User pressed key: r
+DEBUG @ 11:27:01 - User pressed key: r up
+DEBUG @ 11:27:01 - User pressed key: r
+DEBUG @ 11:27:01 - User pressed key: r up
+DEBUG @ 11:27:03 - User pressed key: meta
+DEBUG @ 11:27:03 - User pressed key: lmeta
+DEBUG @ 11:27:03 - User pressed key: meta up
+DEBUG @ 11:27:03 - User pressed key: lmeta up
+DEBUG @ 11:27:10 - User pressed key: e
+DEBUG @ 11:27:10 - User pressed key: e up
+DEBUG @ 11:27:10 - User pressed key: e
+DEBUG @ 11:27:10 - User pressed key: e up
+DEBUG @ 11:27:11 - User pressed key: e
+DEBUG @ 11:27:11 - User pressed key: e up
+DEBUG @ 11:27:11 - User pressed key: e
+DEBUG @ 11:27:11 - User pressed key: e up
+DEBUG @ 11:27:11 - User pressed key: e
+DEBUG @ 11:27:11 - User pressed key: e up
+DEBUG @ 11:27:11 - User pressed key: e
+DEBUG @ 11:27:11 - User pressed key: e up
+DEBUG @ 11:27:11 - User pressed key: e
+DEBUG @ 11:27:11 - User pressed key: e up
+DEBUG @ 11:27:11 - User pressed key: e
+DEBUG @ 11:27:12 - User pressed key: e up
+DEBUG @ 11:27:12 - User pressed key: e
+DEBUG @ 11:27:12 - User pressed key: e up
+DEBUG @ 11:27:12 - User pressed key: e
+DEBUG @ 11:27:12 - User pressed key: e up
+DEBUG @ 11:27:12 - User pressed key: e
+DEBUG @ 11:27:12 - User pressed key: e up
+DEBUG @ 11:27:12 - User pressed key: e
+DEBUG @ 11:27:12 - User pressed key: e up
+DEBUG @ 11:27:12 - User pressed key: e
+DEBUG @ 11:27:12 - User pressed key: e up
+DEBUG @ 11:27:13 - User pressed key: e
+DEBUG @ 11:27:13 - User pressed key: e up
+DEBUG @ 11:27:13 - User pressed key: e
+DEBUG @ 11:27:13 - User pressed key: e up
+DEBUG @ 11:27:13 - User pressed key: e
+DEBUG @ 11:27:13 - User pressed key: e up
+DEBUG @ 11:27:13 - User pressed key: e
+DEBUG @ 11:27:13 - User pressed key: e up
+DEBUG @ 11:27:13 - User pressed key: e
+DEBUG @ 11:27:13 - User pressed key: e up
+DEBUG @ 11:27:13 - User pressed key: e
+DEBUG @ 11:27:14 - User pressed key: e up
+DEBUG @ 11:27:14 - User pressed key: e
+DEBUG @ 11:27:14 - User pressed key: e up
+DEBUG @ 11:27:14 - User pressed key: e
+DEBUG @ 11:27:14 - User pressed key: e up
+DEBUG @ 11:27:14 - User pressed key: e
+DEBUG @ 11:27:14 - User pressed key: e up
+DEBUG @ 11:27:14 - User pressed key: e
+DEBUG @ 11:27:14 - User pressed key: e up
+DEBUG @ 11:27:14 - User pressed key: e
+DEBUG @ 11:27:14 - User pressed key: e up
+DEBUG @ 11:27:15 - User pressed key: e
+DEBUG @ 11:27:15 - User pressed key: e up
+DEBUG @ 11:27:15 - User pressed key: q
+DEBUG @ 11:27:15 - User pressed key: q up
+DEBUG @ 11:27:15 - User pressed key: e
+DEBUG @ 11:27:15 - User pressed key: e up
+DEBUG @ 11:27:15 - User pressed key: e
+DEBUG @ 11:27:15 - User pressed key: e up
+DEBUG @ 11:27:15 - User pressed key: e
+DEBUG @ 11:27:15 - User pressed key: e up
+DEBUG @ 11:27:15 - User pressed key: e
+DEBUG @ 11:27:15 - User pressed key: e up
+DEBUG @ 11:27:16 - User pressed key: e
+DEBUG @ 11:27:16 - User pressed key: e up
+DEBUG @ 11:27:16 - User pressed key: e
+DEBUG @ 11:27:16 - User pressed key: e up
+DEBUG @ 11:27:16 - User pressed key: e
+DEBUG @ 11:27:16 - User pressed key: e up
+DEBUG @ 11:27:16 - User pressed key: e
+DEBUG @ 11:27:16 - User pressed key: e up
+DEBUG @ 11:27:16 - User pressed key: e
+DEBUG @ 11:27:16 - User pressed key: e up
+DEBUG @ 11:27:16 - User pressed key: e
+DEBUG @ 11:27:17 - User pressed key: e up
+DEBUG @ 11:27:17 - User pressed key: e
+DEBUG @ 11:27:17 - User pressed key: e up
+DEBUG @ 11:27:17 - User pressed key: e
+DEBUG @ 11:27:17 - User pressed key: e up
+DEBUG @ 11:27:17 - User pressed key: e
+DEBUG @ 11:27:17 - User pressed key: e up
+DEBUG @ 11:27:17 - User pressed key: e
+DEBUG @ 11:27:17 - User pressed key: e up
+DEBUG @ 11:27:17 - User pressed key: e
+DEBUG @ 11:27:17 - User pressed key: e up
+DEBUG @ 11:27:17 - User pressed key: e
+DEBUG @ 11:27:18 - User pressed key: e up
+DEBUG @ 11:27:18 - User pressed key: e
+DEBUG @ 11:27:18 - User pressed key: e up
+DEBUG @ 11:27:18 - User pressed key: e
+DEBUG @ 11:27:18 - User pressed key: e up
+DEBUG @ 11:27:18 - User pressed key: e
+DEBUG @ 11:27:18 - User pressed key: e up
+DEBUG @ 11:27:18 - User pressed key: e
+DEBUG @ 11:27:18 - User pressed key: e up
+DEBUG @ 11:27:18 - User pressed key: e
+DEBUG @ 11:27:18 - User pressed key: e up
+DEBUG @ 11:27:19 - User pressed key: e
+DEBUG @ 11:27:19 - User pressed key: e up
+DEBUG @ 11:27:19 - User pressed key: e
+DEBUG @ 11:27:19 - User pressed key: e up
+DEBUG @ 11:27:19 - User pressed key: e
+DEBUG @ 11:27:19 - User pressed key: e up
+DEBUG @ 11:27:20 - User pressed key: f3
+DEBUG @ 11:27:21 - User pressed key: f3 up
+DEBUG @ 11:27:22 - User pressed key: q
+DEBUG @ 11:27:22 - User pressed key: q up
+DEBUG @ 11:27:24 - User pressed key: e
+DEBUG @ 11:27:24 - User pressed key: e up
+DEBUG @ 11:27:24 - User pressed key: e
+DEBUG @ 11:27:24 - User pressed key: e up
+DEBUG @ 11:27:24 - User pressed key: e
+DEBUG @ 11:27:24 - User pressed key: e up
+DEBUG @ 11:27:24 - User pressed key: e
+DEBUG @ 11:27:24 - User pressed key: e up
+DEBUG @ 11:27:24 - User pressed key: e
+DEBUG @ 11:27:24 - User pressed key: e up
+DEBUG @ 11:27:24 - User pressed key: e
+DEBUG @ 11:27:24 - User pressed key: e up
+DEBUG @ 11:27:25 - User pressed key: e
+DEBUG @ 11:27:25 - User pressed key: e up
+DEBUG @ 11:27:25 - User pressed key: e
+DEBUG @ 11:27:25 - User pressed key: e up
+DEBUG @ 11:27:25 - User pressed key: e
+DEBUG @ 11:27:25 - User pressed key: e up
+DEBUG @ 11:27:25 - User pressed key: e
+DEBUG @ 11:27:25 - User pressed key: e up
+DEBUG @ 11:27:25 - User pressed key: e
+DEBUG @ 11:27:25 - User pressed key: e up
+DEBUG @ 11:27:25 - User pressed key: e
+DEBUG @ 11:27:25 - User pressed key: e up
+DEBUG @ 11:27:26 - User pressed key: e
+DEBUG @ 11:27:26 - User pressed key: e up
+DEBUG @ 11:27:26 - User pressed key: e
+DEBUG @ 11:27:26 - User pressed key: e up
+DEBUG @ 11:27:26 - User pressed key: e
+DEBUG @ 11:27:26 - User pressed key: e up
+DEBUG @ 11:27:26 - User pressed key: e
+DEBUG @ 11:27:26 - User pressed key: e up
+DEBUG @ 11:27:26 - User pressed key: e
+DEBUG @ 11:27:26 - User pressed key: e up
+DEBUG @ 11:27:26 - User pressed key: e
+DEBUG @ 11:27:26 - User pressed key: e up
+DEBUG @ 11:27:27 - User pressed key: e
+DEBUG @ 11:27:27 - User pressed key: e up
+DEBUG @ 11:27:27 - User pressed key: e
+DEBUG @ 11:27:27 - User pressed key: e up
+DEBUG @ 11:27:27 - User pressed key: e
+DEBUG @ 11:27:27 - User pressed key: e up
+DEBUG @ 11:27:27 - User pressed key: e
+DEBUG @ 11:27:28 - User pressed key: e up
+DEBUG @ 11:27:28 - User pressed key: q
+DEBUG @ 11:27:28 - User pressed key: q up
+DEBUG @ 11:27:28 - User pressed key: e
+DEBUG @ 11:27:28 - User pressed key: e up
+DEBUG @ 11:27:28 - User pressed key: e
+DEBUG @ 11:27:28 - User pressed key: e up
+DEBUG @ 11:27:28 - User pressed key: e
+DEBUG @ 11:27:29 - User pressed key: e hold
+DEBUG @ 11:27:29 - User pressed key: e hold
+DEBUG @ 11:27:29 - User pressed key: e hold
+DEBUG @ 11:27:29 - User pressed key: e hold
+DEBUG @ 11:27:29 - User pressed key: e hold
+DEBUG @ 11:27:29 - User pressed key: e hold
+DEBUG @ 11:27:29 - User pressed key: e up
+DEBUG @ 11:27:29 - User pressed key: e
+DEBUG @ 11:27:30 - User pressed key: e up
+DEBUG @ 11:27:30 - User pressed key: e
+DEBUG @ 11:27:30 - User pressed key: e up
+DEBUG @ 11:27:30 - User pressed key: e
+DEBUG @ 11:27:30 - User pressed key: e up
+DEBUG @ 11:27:30 - User pressed key: e
+DEBUG @ 11:27:30 - User pressed key: e up
+DEBUG @ 11:27:30 - User pressed key: e
+DEBUG @ 11:27:30 - User pressed key: e up
+DEBUG @ 11:27:30 - User pressed key: e
+DEBUG @ 11:27:30 - User pressed key: e up
+DEBUG @ 11:27:30 - User pressed key: e
+DEBUG @ 11:27:31 - User pressed key: e up
+DEBUG @ 11:27:31 - User pressed key: e
+DEBUG @ 11:27:31 - User pressed key: e up
+DEBUG @ 11:27:31 - User pressed key: e
+DEBUG @ 11:27:31 - User pressed key: e up
+DEBUG @ 11:27:31 - User pressed key: e
+DEBUG @ 11:27:31 - User pressed key: e up
+DEBUG @ 11:27:31 - User pressed key: e
+DEBUG @ 11:27:31 - User pressed key: e up
+DEBUG @ 11:27:31 - User pressed key: e
+DEBUG @ 11:27:31 - User pressed key: e up
+DEBUG @ 11:27:32 - User pressed key: e
+DEBUG @ 11:27:32 - User pressed key: e up
+DEBUG @ 11:27:32 - User pressed key: e
+DEBUG @ 11:27:32 - User pressed key: e up
+DEBUG @ 11:27:32 - User pressed key: e
+DEBUG @ 11:27:32 - User pressed key: e up
+DEBUG @ 11:27:32 - User pressed key: e
+DEBUG @ 11:27:32 - User pressed key: e up
+DEBUG @ 11:27:32 - User pressed key: e
+DEBUG @ 11:27:32 - User pressed key: e up
+DEBUG @ 11:27:32 - User pressed key: e
+DEBUG @ 11:27:33 - User pressed key: e up
+DEBUG @ 11:27:33 - User pressed key: e
+DEBUG @ 11:27:33 - User pressed key: e up
+DEBUG @ 11:27:33 - User pressed key: e
+DEBUG @ 11:27:33 - User pressed key: e up
+DEBUG @ 11:27:33 - User pressed key: q
+DEBUG @ 11:27:33 - User pressed key: q up
+DEBUG @ 11:27:34 - User pressed key: e
+DEBUG @ 11:27:34 - User pressed key: e up
+DEBUG @ 11:27:34 - User pressed key: e
+DEBUG @ 11:27:34 - User pressed key: e up
+DEBUG @ 11:27:34 - User pressed key: e
+DEBUG @ 11:27:34 - User pressed key: e up
+DEBUG @ 11:27:34 - User pressed key: e
+DEBUG @ 11:27:34 - User pressed key: e up
+DEBUG @ 11:27:35 - User pressed key: e
+DEBUG @ 11:27:35 - User pressed key: e up
+DEBUG @ 11:27:35 - User pressed key: e
+DEBUG @ 11:27:35 - User pressed key: e up
+DEBUG @ 11:27:36 - User pressed key: e
+DEBUG @ 11:27:36 - User pressed key: e up
+DEBUG @ 11:27:36 - User pressed key: e
+DEBUG @ 11:27:36 - User pressed key: e up
+DEBUG @ 11:27:36 - User pressed key: e
+DEBUG @ 11:27:36 - User pressed key: e up
+DEBUG @ 11:27:36 - User pressed key: e
+DEBUG @ 11:27:36 - User pressed key: e up
+DEBUG @ 11:27:36 - User pressed key: e
+DEBUG @ 11:27:37 - User pressed key: e up
+DEBUG @ 11:27:37 - User pressed key: e
+DEBUG @ 11:27:37 - User pressed key: e up
+DEBUG @ 11:27:37 - User pressed key: e
+DEBUG @ 11:27:37 - User pressed key: e up
+DEBUG @ 11:27:37 - User pressed key: e
+DEBUG @ 11:27:37 - User pressed key: e up
+DEBUG @ 11:27:37 - User pressed key: e
+DEBUG @ 11:27:38 - User pressed key: e up
+DEBUG @ 11:27:38 - User pressed key: e
+DEBUG @ 11:27:38 - User pressed key: e up
+DEBUG @ 11:27:38 - User pressed key: e
+DEBUG @ 11:27:38 - User pressed key: e up
+DEBUG @ 11:27:38 - User pressed key: e
+DEBUG @ 11:27:38 - User pressed key: e up
+DEBUG @ 11:27:38 - User pressed key: e
+DEBUG @ 11:27:38 - User pressed key: e up
+DEBUG @ 11:27:38 - User pressed key: e
+DEBUG @ 11:27:38 - User pressed key: e up
+DEBUG @ 11:27:38 - User pressed key: e
+DEBUG @ 11:27:39 - User pressed key: e up
+DEBUG @ 11:27:39 - User pressed key: e
+DEBUG @ 11:27:39 - User pressed key: e up
+DEBUG @ 11:27:39 - User pressed key: e
+DEBUG @ 11:27:39 - User pressed key: e up
+DEBUG @ 11:27:39 - User pressed key: q
+DEBUG @ 11:27:39 - User pressed key: q up
+DEBUG @ 11:27:40 - User pressed key: e
+DEBUG @ 11:27:40 - User pressed key: e hold
+DEBUG @ 11:27:40 - User pressed key: e hold
+DEBUG @ 11:27:40 - User pressed key: e hold
+DEBUG @ 11:27:40 - User pressed key: e hold
+DEBUG @ 11:27:40 - User pressed key: e hold
+DEBUG @ 11:27:40 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e hold
+DEBUG @ 11:27:41 - User pressed key: e up
+DEBUG @ 11:27:41 - User pressed key: e
+DEBUG @ 11:27:41 - User pressed key: e up
+DEBUG @ 11:27:41 - User pressed key: e
+DEBUG @ 11:27:42 - User pressed key: e up
+DEBUG @ 11:27:42 - User pressed key: e
+DEBUG @ 11:27:42 - User pressed key: e up
+DEBUG @ 11:27:42 - User pressed key: e
+DEBUG @ 11:27:42 - User pressed key: e up
+DEBUG @ 11:27:42 - User pressed key: e
+DEBUG @ 11:27:42 - User pressed key: e up
+DEBUG @ 11:27:42 - User pressed key: e
+DEBUG @ 11:27:42 - User pressed key: e up
+DEBUG @ 11:27:42 - User pressed key: e
+DEBUG @ 11:27:42 - User pressed key: e up
+DEBUG @ 11:27:43 - User pressed key: e
+DEBUG @ 11:27:43 - User pressed key: e up
+DEBUG @ 11:27:43 - User pressed key: e
+DEBUG @ 11:27:43 - User pressed key: e up
+DEBUG @ 11:27:43 - User pressed key: e
+DEBUG @ 11:27:43 - User pressed key: e up
+DEBUG @ 11:27:43 - User pressed key: e
+DEBUG @ 11:27:43 - User pressed key: e up
+DEBUG @ 11:27:43 - User pressed key: e
+DEBUG @ 11:27:43 - User pressed key: e up
+DEBUG @ 11:27:43 - User pressed key: e
+DEBUG @ 11:27:44 - User pressed key: e up
+DEBUG @ 11:27:44 - User pressed key: e
+DEBUG @ 11:27:44 - User pressed key: e up
+DEBUG @ 11:27:44 - User pressed key: e
+DEBUG @ 11:27:44 - User pressed key: e up
+DEBUG @ 11:27:44 - User pressed key: e
+DEBUG @ 11:27:44 - User pressed key: e up
+DEBUG @ 11:27:44 - User pressed key: e
+DEBUG @ 11:27:44 - User pressed key: e up
+DEBUG @ 11:27:44 - User pressed key: e
+DEBUG @ 11:27:44 - User pressed key: e up
+DEBUG @ 11:27:45 - User pressed key: e
+DEBUG @ 11:27:45 - User pressed key: e up
+DEBUG @ 11:27:45 - User pressed key: e
+DEBUG @ 11:27:45 - User pressed key: e up
+DEBUG @ 11:27:45 - User pressed key: e
+DEBUG @ 11:27:45 - User pressed key: e up
+DEBUG @ 11:27:45 - User pressed key: q
+DEBUG @ 11:27:45 - User pressed key: q up
+DEBUG @ 11:27:45 - User pressed key: e
+DEBUG @ 11:27:45 - User pressed key: e up
+DEBUG @ 11:27:45 - User pressed key: e
+DEBUG @ 11:27:45 - User pressed key: e up
+DEBUG @ 11:27:46 - User pressed key: e
+DEBUG @ 11:27:46 - User pressed key: e up
+DEBUG @ 11:27:46 - User pressed key: e
+DEBUG @ 11:27:46 - User pressed key: e up
+DEBUG @ 11:27:46 - User pressed key: e
+DEBUG @ 11:27:46 - User pressed key: e up
+DEBUG @ 11:27:46 - User pressed key: e
+DEBUG @ 11:27:46 - User pressed key: e up
+DEBUG @ 11:27:46 - User pressed key: e
+DEBUG @ 11:27:46 - User pressed key: e up
+DEBUG @ 11:27:46 - User pressed key: e
+DEBUG @ 11:27:46 - User pressed key: e up
+DEBUG @ 11:27:47 - User pressed key: e
+DEBUG @ 11:27:47 - User pressed key: e up
+DEBUG @ 11:27:47 - User pressed key: e
+DEBUG @ 11:27:47 - User pressed key: e up
+DEBUG @ 11:27:47 - User pressed key: e
+DEBUG @ 11:27:47 - User pressed key: e up
+DEBUG @ 11:27:47 - User pressed key: e
+DEBUG @ 11:27:47 - User pressed key: e up
+DEBUG @ 11:27:47 - User pressed key: e
+DEBUG @ 11:27:47 - User pressed key: e up
+DEBUG @ 11:27:47 - User pressed key: e
+DEBUG @ 11:27:48 - User pressed key: e up
+DEBUG @ 11:27:48 - User pressed key: e
+DEBUG @ 11:27:48 - User pressed key: e up
+DEBUG @ 11:27:48 - User pressed key: e
+DEBUG @ 11:27:48 - User pressed key: e up
+DEBUG @ 11:27:48 - User pressed key: e
+DEBUG @ 11:27:48 - User pressed key: e up
+DEBUG @ 11:27:48 - User pressed key: e
+DEBUG @ 11:27:48 - User pressed key: e up
+DEBUG @ 11:27:48 - User pressed key: e
+DEBUG @ 11:27:48 - User pressed key: e up
+DEBUG @ 11:27:49 - User pressed key: e
+DEBUG @ 11:27:49 - User pressed key: e up
+DEBUG @ 11:27:49 - User pressed key: e
+DEBUG @ 11:27:49 - User pressed key: e up
+DEBUG @ 11:27:49 - User pressed key: e
+DEBUG @ 11:27:49 - User pressed key: e up
+DEBUG @ 11:27:49 - User pressed key: e
+DEBUG @ 11:27:49 - User pressed key: e up
+DEBUG @ 11:27:50 - User pressed key: q
+DEBUG @ 11:27:50 - User pressed key: e
+DEBUG @ 11:27:50 - User pressed key: q up
+DEBUG @ 11:27:50 - User pressed key: e up
+DEBUG @ 11:27:50 - User pressed key: e
+DEBUG @ 11:27:50 - User pressed key: e up
+DEBUG @ 11:27:50 - User pressed key: e
+DEBUG @ 11:27:50 - User pressed key: e up
+DEBUG @ 11:27:51 - User pressed key: e
+DEBUG @ 11:27:51 - User pressed key: e up
+DEBUG @ 11:27:51 - User pressed key: e
+DEBUG @ 11:27:51 - User pressed key: e up
+DEBUG @ 11:27:51 - User pressed key: e
+DEBUG @ 11:27:51 - User pressed key: e up
+DEBUG @ 11:27:51 - User pressed key: e
+DEBUG @ 11:27:51 - User pressed key: e up
+DEBUG @ 11:27:51 - User pressed key: e
+DEBUG @ 11:27:51 - User pressed key: e up
+DEBUG @ 11:27:52 - User pressed key: e
+DEBUG @ 11:27:52 - User pressed key: e up
+DEBUG @ 11:27:52 - User pressed key: e
+DEBUG @ 11:27:52 - User pressed key: e up
+DEBUG @ 11:27:52 - User pressed key: e
+DEBUG @ 11:27:52 - User pressed key: e up
+DEBUG @ 11:27:52 - User pressed key: e
+DEBUG @ 11:27:52 - User pressed key: e up
+DEBUG @ 11:27:52 - User pressed key: e
+DEBUG @ 11:27:52 - User pressed key: e up
+DEBUG @ 11:27:52 - User pressed key: e
+DEBUG @ 11:27:53 - User pressed key: e up
+DEBUG @ 11:27:53 - User pressed key: e
+DEBUG @ 11:27:53 - User pressed key: e up
+DEBUG @ 11:27:53 - User pressed key: e
+DEBUG @ 11:27:53 - User pressed key: e up
+DEBUG @ 11:27:53 - User pressed key: e
+DEBUG @ 11:27:53 - User pressed key: e up
+DEBUG @ 11:27:53 - User pressed key: e
+DEBUG @ 11:27:53 - User pressed key: e up
+DEBUG @ 11:27:53 - User pressed key: e
+DEBUG @ 11:27:54 - User pressed key: e up
+DEBUG @ 11:27:54 - User pressed key: e
+DEBUG @ 11:27:54 - User pressed key: e up
+DEBUG @ 11:27:54 - User pressed key: e
+DEBUG @ 11:27:54 - User pressed key: e up
+DEBUG @ 11:27:54 - User pressed key: e
+DEBUG @ 11:27:54 - User pressed key: e up
+DEBUG @ 11:27:54 - User pressed key: q
+DEBUG @ 11:27:55 - User pressed key: q up
+DEBUG @ 11:27:55 - User pressed key: e
+DEBUG @ 11:27:55 - User pressed key: e up
+DEBUG @ 11:27:55 - User pressed key: e
+DEBUG @ 11:27:55 - User pressed key: e up
+DEBUG @ 11:27:55 - User pressed key: e
+DEBUG @ 11:27:55 - User pressed key: e up
+DEBUG @ 11:27:55 - User pressed key: e
+DEBUG @ 11:27:55 - User pressed key: e up
+DEBUG @ 11:27:55 - User pressed key: e
+DEBUG @ 11:27:55 - User pressed key: e up
+DEBUG @ 11:27:55 - User pressed key: e
+DEBUG @ 11:27:55 - User pressed key: e up
+DEBUG @ 11:27:56 - User pressed key: e
+DEBUG @ 11:27:56 - User pressed key: e up
+DEBUG @ 11:27:56 - User pressed key: e
+DEBUG @ 11:27:56 - User pressed key: e up
+DEBUG @ 11:27:56 - User pressed key: e
+DEBUG @ 11:27:56 - User pressed key: e up
+DEBUG @ 11:27:56 - User pressed key: e
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e hold
+DEBUG @ 11:27:57 - User pressed key: e up
+DEBUG @ 11:27:57 - User pressed key: e
+DEBUG @ 11:27:57 - User pressed key: e up
+DEBUG @ 11:27:58 - User pressed key: e
+DEBUG @ 11:27:58 - User pressed key: e up
+DEBUG @ 11:27:58 - User pressed key: e
+DEBUG @ 11:27:58 - User pressed key: e up
+DEBUG @ 11:27:58 - User pressed key: e
+DEBUG @ 11:27:58 - User pressed key: e up
+DEBUG @ 11:27:58 - User pressed key: e
+DEBUG @ 11:27:58 - User pressed key: e up
+DEBUG @ 11:27:58 - User pressed key: e
+DEBUG @ 11:27:58 - User pressed key: e up
+DEBUG @ 11:27:59 - User pressed key: e
+DEBUG @ 11:27:59 - User pressed key: e up
+DEBUG @ 11:27:59 - User pressed key: e
+DEBUG @ 11:27:59 - User pressed key: e up
+DEBUG @ 11:27:59 - User pressed key: e
+DEBUG @ 11:27:59 - User pressed key: e up
+DEBUG @ 11:27:59 - User pressed key: e
+DEBUG @ 11:27:59 - User pressed key: e up
+DEBUG @ 11:27:59 - User pressed key: e
+DEBUG @ 11:27:59 - User pressed key: e up
+DEBUG @ 11:27:59 - User pressed key: e
+DEBUG @ 11:28:00 - User pressed key: e up
+DEBUG @ 11:28:00 - User pressed key: e
+DEBUG @ 11:28:00 - User pressed key: e up
+DEBUG @ 11:28:00 - User pressed key: e
+DEBUG @ 11:28:00 - User pressed key: e up
+DEBUG @ 11:28:00 - User pressed key: q
+DEBUG @ 11:28:01 - User pressed key: q up
+DEBUG @ 11:28:01 - User pressed key: e
+DEBUG @ 11:28:01 - User pressed key: e up
+DEBUG @ 11:28:01 - User pressed key: e
+DEBUG @ 11:28:01 - User pressed key: e up
+DEBUG @ 11:28:01 - User pressed key: e
+DEBUG @ 11:28:01 - User pressed key: e up
+DEBUG @ 11:28:01 - User pressed key: e
+DEBUG @ 11:28:01 - User pressed key: e up
+DEBUG @ 11:28:01 - User pressed key: e
+DEBUG @ 11:28:01 - User pressed key: e up
+DEBUG @ 11:28:01 - User pressed key: e
+DEBUG @ 11:28:02 - User pressed key: e up
+DEBUG @ 11:28:02 - User pressed key: e
+DEBUG @ 11:28:02 - User pressed key: e up
+DEBUG @ 11:28:02 - User pressed key: e
+DEBUG @ 11:28:02 - User pressed key: e up
+DEBUG @ 11:28:02 - User pressed key: e
+DEBUG @ 11:28:02 - User pressed key: e up
+DEBUG @ 11:28:02 - User pressed key: e
+DEBUG @ 11:28:02 - User pressed key: e up
+DEBUG @ 11:28:02 - User pressed key: e
+DEBUG @ 11:28:02 - User pressed key: e up
+DEBUG @ 11:28:03 - User pressed key: e
+DEBUG @ 11:28:03 - User pressed key: e up
+DEBUG @ 11:28:03 - User pressed key: e
+DEBUG @ 11:28:03 - User pressed key: e up
+DEBUG @ 11:28:03 - User pressed key: e
+DEBUG @ 11:28:03 - User pressed key: e up
+DEBUG @ 11:28:03 - User pressed key: e
+DEBUG @ 11:28:03 - User pressed key: e up
+DEBUG @ 11:28:03 - User pressed key: e
+DEBUG @ 11:28:03 - User pressed key: e up
+DEBUG @ 11:28:03 - User pressed key: e
+DEBUG @ 11:28:04 - User pressed key: e up
+DEBUG @ 11:28:04 - User pressed key: e
+DEBUG @ 11:28:04 - User pressed key: e up
+DEBUG @ 11:28:04 - User pressed key: e
+DEBUG @ 11:28:04 - User pressed key: e up
+DEBUG @ 11:28:04 - User pressed key: e
+DEBUG @ 11:28:04 - User pressed key: e up
+DEBUG @ 11:28:04 - User pressed key: e
+DEBUG @ 11:28:04 - User pressed key: e up
+DEBUG @ 11:28:04 - User pressed key: e
+DEBUG @ 11:28:04 - User pressed key: e up
+DEBUG @ 11:28:05 - User pressed key: e
+DEBUG @ 11:28:05 - User pressed key: e up
+DEBUG @ 11:28:05 - User pressed key: e
+DEBUG @ 11:28:05 - User pressed key: e up
+DEBUG @ 11:28:05 - User pressed key: q
+DEBUG @ 11:28:05 - User pressed key: q up
+DEBUG @ 11:28:05 - User pressed key: q
+DEBUG @ 11:28:05 - User pressed key: q up
+DEBUG @ 11:28:06 - User pressed key: e
+DEBUG @ 11:28:06 - User pressed key: e up
+DEBUG @ 11:28:06 - User pressed key: e
+DEBUG @ 11:28:06 - User pressed key: e up
+DEBUG @ 11:28:06 - User pressed key: e
+DEBUG @ 11:28:06 - User pressed key: e up
+DEBUG @ 11:28:06 - User pressed key: e
+DEBUG @ 11:28:06 - User pressed key: e up
+DEBUG @ 11:28:06 - User pressed key: e
+DEBUG @ 11:28:06 - User pressed key: e up
+DEBUG @ 11:28:07 - User pressed key: e
+DEBUG @ 11:28:07 - User pressed key: e up
+DEBUG @ 11:28:07 - User pressed key: e
+DEBUG @ 11:28:07 - User pressed key: e up
+DEBUG @ 11:28:07 - User pressed key: e
+DEBUG @ 11:28:07 - User pressed key: e up
+DEBUG @ 11:28:07 - User pressed key: e
+DEBUG @ 11:28:07 - User pressed key: e up
+DEBUG @ 11:28:08 - User pressed key: e
+DEBUG @ 11:28:08 - User pressed key: e up
+DEBUG @ 11:28:08 - User pressed key: e
+DEBUG @ 11:28:08 - User pressed key: e up
+DEBUG @ 11:28:08 - User pressed key: e
+DEBUG @ 11:28:08 - User pressed key: e up
+DEBUG @ 11:28:08 - User pressed key: e
+DEBUG @ 11:28:08 - User pressed key: e up
+DEBUG @ 11:28:08 - User pressed key: e
+DEBUG @ 11:28:08 - User pressed key: e up
+DEBUG @ 11:28:08 - User pressed key: e
+DEBUG @ 11:28:09 - User pressed key: e up
+DEBUG @ 11:28:09 - User pressed key: e
+DEBUG @ 11:28:09 - User pressed key: e up
+DEBUG @ 11:28:09 - User pressed key: e
+DEBUG @ 11:28:09 - User pressed key: e up
+DEBUG @ 11:28:09 - User pressed key: e
+DEBUG @ 11:28:09 - User pressed key: e up
+DEBUG @ 11:28:09 - User pressed key: e
+DEBUG @ 11:28:09 - User pressed key: e up
+DEBUG @ 11:28:10 - User pressed key: e
+DEBUG @ 11:28:10 - User pressed key: e up
+DEBUG @ 11:28:10 - User pressed key: e
+DEBUG @ 11:28:10 - User pressed key: e up
+DEBUG @ 11:28:10 - User pressed key: e
+DEBUG @ 11:28:10 - User pressed key: e up
+DEBUG @ 11:28:10 - User pressed key: e
+DEBUG @ 11:28:10 - User pressed key: e up
+DEBUG @ 11:28:10 - User pressed key: e
+DEBUG @ 11:28:11 - User pressed key: e up
+DEBUG @ 11:28:11 - User pressed key: e
+DEBUG @ 11:28:11 - User pressed key: e up
+DEBUG @ 11:28:11 - User pressed key: e
+DEBUG @ 11:28:11 - User pressed key: e up
+DEBUG @ 11:28:11 - User pressed key: e
+DEBUG @ 11:28:11 - User pressed key: e up
+DEBUG @ 11:28:11 - User pressed key: q
+DEBUG @ 11:28:12 - User pressed key: q up
+DEBUG @ 11:28:12 - User pressed key: e
+DEBUG @ 11:28:12 - User pressed key: e up
+DEBUG @ 11:28:12 - User pressed key: e
+DEBUG @ 11:28:12 - User pressed key: e up
+DEBUG @ 11:28:12 - User pressed key: e
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e hold
+DEBUG @ 11:28:13 - User pressed key: e up
+DEBUG @ 11:28:13 - User pressed key: e
+DEBUG @ 11:28:13 - User pressed key: e up
+DEBUG @ 11:28:13 - User pressed key: e
+DEBUG @ 11:28:14 - User pressed key: e up
+DEBUG @ 11:28:14 - User pressed key: e
+DEBUG @ 11:28:14 - User pressed key: e up
+DEBUG @ 11:28:14 - User pressed key: e
+DEBUG @ 11:28:14 - User pressed key: e up
+DEBUG @ 11:28:14 - User pressed key: e
+DEBUG @ 11:28:14 - User pressed key: e up
+DEBUG @ 11:28:14 - User pressed key: e
+DEBUG @ 11:28:14 - User pressed key: e up
+DEBUG @ 11:28:14 - User pressed key: e
+DEBUG @ 11:28:14 - User pressed key: e up
+DEBUG @ 11:28:15 - User pressed key: e
+DEBUG @ 11:28:15 - User pressed key: e up
+DEBUG @ 11:28:15 - User pressed key: e
+DEBUG @ 11:28:15 - User pressed key: e up
+DEBUG @ 11:28:15 - User pressed key: e
+DEBUG @ 11:28:15 - User pressed key: e up
+DEBUG @ 11:28:15 - User pressed key: e
+DEBUG @ 11:28:15 - User pressed key: e up
+DEBUG @ 11:28:16 - User pressed key: e
+DEBUG @ 11:28:16 - User pressed key: e up
+DEBUG @ 11:28:16 - User pressed key: e
+DEBUG @ 11:28:16 - User pressed key: e up
+DEBUG @ 11:28:16 - User pressed key: e
+DEBUG @ 11:28:16 - User pressed key: e up
+DEBUG @ 11:28:16 - User pressed key: e
+DEBUG @ 11:28:16 - User pressed key: e up
+DEBUG @ 11:28:16 - User pressed key: e
+DEBUG @ 11:28:16 - User pressed key: e up
+DEBUG @ 11:28:16 - User pressed key: e
+DEBUG @ 11:28:17 - User pressed key: e up
+DEBUG @ 11:28:17 - User pressed key: e
+DEBUG @ 11:28:17 - User pressed key: e up
+DEBUG @ 11:28:17 - User pressed key: e
+DEBUG @ 11:28:17 - User pressed key: e up
+DEBUG @ 11:28:17 - User pressed key: e
+DEBUG @ 11:28:17 - User pressed key: e up
+DEBUG @ 11:28:17 - User pressed key: q
+DEBUG @ 11:28:17 - User pressed key: q up
+DEBUG @ 11:28:17 - User pressed key: e
+DEBUG @ 11:28:18 - User pressed key: e up
+DEBUG @ 11:28:18 - User pressed key: e
+DEBUG @ 11:28:18 - User pressed key: e up
+DEBUG @ 11:28:18 - User pressed key: e
+DEBUG @ 11:28:18 - User pressed key: e up
+DEBUG @ 11:28:18 - User pressed key: e
+DEBUG @ 11:28:18 - User pressed key: e up
+DEBUG @ 11:28:18 - User pressed key: e
+DEBUG @ 11:28:18 - User pressed key: e up
+DEBUG @ 11:28:18 - User pressed key: e
+DEBUG @ 11:28:18 - User pressed key: e up
+DEBUG @ 11:28:18 - User pressed key: e
+DEBUG @ 11:28:19 - User pressed key: e up
+DEBUG @ 11:28:19 - User pressed key: e
+DEBUG @ 11:28:19 - User pressed key: e up
+DEBUG @ 11:28:19 - User pressed key: e
+DEBUG @ 11:28:19 - User pressed key: e up
+DEBUG @ 11:28:19 - User pressed key: e
+DEBUG @ 11:28:19 - User pressed key: e up
+DEBUG @ 11:28:19 - User pressed key: e
+DEBUG @ 11:28:19 - User pressed key: e up
+DEBUG @ 11:28:19 - User pressed key: e
+DEBUG @ 11:28:19 - User pressed key: e up
+DEBUG @ 11:28:20 - User pressed key: e
+DEBUG @ 11:28:20 - User pressed key: e up
+DEBUG @ 11:28:20 - User pressed key: e
+DEBUG @ 11:28:20 - User pressed key: e up
+DEBUG @ 11:28:20 - User pressed key: e
+DEBUG @ 11:28:20 - User pressed key: e up
+DEBUG @ 11:28:20 - User pressed key: e
+DEBUG @ 11:28:20 - User pressed key: e up
+DEBUG @ 11:28:20 - User pressed key: e
+DEBUG @ 11:28:20 - User pressed key: e up
+DEBUG @ 11:28:20 - User pressed key: e
+DEBUG @ 11:28:21 - User pressed key: e up
+DEBUG @ 11:28:21 - User pressed key: e
+DEBUG @ 11:28:21 - User pressed key: e up
+DEBUG @ 11:28:21 - User pressed key: e
+DEBUG @ 11:28:21 - User pressed key: e up
+DEBUG @ 11:28:21 - User pressed key: e
+DEBUG @ 11:28:21 - User pressed key: e up
+DEBUG @ 11:28:21 - User pressed key: e
+DEBUG @ 11:28:21 - User pressed key: e up
+DEBUG @ 11:28:21 - User pressed key: e
+DEBUG @ 11:28:21 - User pressed key: e up
+DEBUG @ 11:28:22 - User pressed key: e
+DEBUG @ 11:28:22 - User pressed key: e up
+DEBUG @ 11:28:22 - User pressed key: e
+DEBUG @ 11:28:22 - User pressed key: e up
+DEBUG @ 11:28:22 - User pressed key: meta
+DEBUG @ 11:28:22 - User pressed key: lmeta
+DEBUG @ 11:28:22 - User pressed key: meta up
+DEBUG @ 11:28:22 - User pressed key: lmeta up
+DEBUG @ 11:28:23 - User pressed key: tab
+DEBUG @ 11:28:23 - User pressed key: meta
+DEBUG @ 11:28:23 - User pressed key: lmeta
+DEBUG @ 11:28:23 - User pressed key: tab up
+DEBUG @ 11:28:23 - User pressed key: meta up
+DEBUG @ 11:28:23 - User pressed key: lmeta up
+DEBUG @ 11:28:23 - User pressed key: meta
+DEBUG @ 11:28:23 - User pressed key: lmeta
+DEBUG @ 11:28:23 - User pressed key: meta up
+DEBUG @ 11:28:23 - User pressed key: lmeta up

@@ -1,0 +1,42 @@
+DEBUG @ 17:22:58 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 17:22:58 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 17:22:59 - Processor: Apple M1
+DEBUG @ 17:22:59 - Node: Macbook.fritz.box
+DEBUG @ 17:22:59 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 17:22:59 - RunID: 27724
+DEBUG @ 17:22:59 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 17:22:59 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 17:22:59 - App Window Text: TowerDefense
+DEBUG @ 17:22:59 - App Allow Log SysInfo: 1
+DEBUG @ 17:22:59 - App Max Framerate: 60
+DEBUG @ 17:22:59 - App Fullscreen: 1
+DEBUG @ 17:22:59 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM @ 17:22:59 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 17:22:59 - Loaded all packages successfully. Starting App...
+DEBUG @ 17:22:59 - Time from start to end of loading essentials: 1.1195149421691895s
+INFO @ 17:22:59 - Created window
+DEBUG @ 17:22:59 - Sky and ground has been created.
+INFO @ 17:22:59 - User Interface has been created
+DEBUG @ 17:22:59 - Player created.
+INFO @ 17:22:59 - Window parameters has been updated.
+DEBUG @ 17:22:59 - Enemy tester entity has been created
+INFO @ 17:22:59 - Enemy1's Entity has been spawned
+INFO @ 17:22:59 - Loading done in 1.1262638568878174s
+COSM @ 17:22:59 - - - - - End of Loading LOG     
+FATAL @ 17:22:59 - How this is even working?
+DEBUG @ 17:22:59 - User pressed key: f5 up
+DEBUG @ 17:22:59 - User pressed key: f4
+DEBUG @ 17:22:59 - User pressed key: f4 up
+DEBUG @ 17:22:59 - User pressed key: f4
+DEBUG @ 17:23:00 - User pressed key: f4 up
+DEBUG @ 17:23:00 - User pressed key: f3
+DEBUG @ 17:23:00 - User pressed key: f3 up
+DEBUG @ 17:23:00 - User pressed key: escape
+DEBUG @ 17:23:00 - User pressed key: escape up
+DEBUG @ 17:23:01 - User pressed key: meta
+DEBUG @ 17:23:01 - User pressed key: lmeta
+DEBUG @ 17:23:01 - User pressed key: meta up
+DEBUG @ 17:23:01 - User pressed key: lmeta up

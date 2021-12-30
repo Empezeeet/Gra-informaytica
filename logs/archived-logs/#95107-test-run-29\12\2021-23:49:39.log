@@ -1,0 +1,43 @@
+DEBUG @ 23:49:39 - - - - - - - - SYSTEM INFO - - - - - - -
+DEBUG @ 23:49:39 - System: macOS-12.1-arm64-arm-64bit
+DEBUG @ 23:49:40 - Processor: Apple M1
+DEBUG @ 23:49:40 - Node: Macbook.fritz.box
+DEBUG @ 23:49:40 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
+DEBUG @ 23:49:40 - RunID: 95107
+DEBUG @ 23:49:40 - - - - - - - - SYSTEM INFO - - - - - - -
+
+DEBUG @ 23:49:40 - - - -  - - - - APP SETTINGS - - - - - - -
+DEBUG @ 23:49:40 - App Window Text: TowerDefense
+DEBUG @ 23:49:40 - App Allow Log SysInfo: 1
+DEBUG @ 23:49:40 - App Max Framerate: 60
+DEBUG @ 23:49:40 - App Fullscreen: 1
+DEBUG @ 23:49:40 - - - - - - - - APP SETTINGS - - - - - - -
+
+
+COSM  @ 23:49:40 - - - - - - - - - - - - LOG - - - - - - - - - - -
+INFO @ 23:49:40 - Loaded all packages successfully. Starting App...
+DEBUG @ 23:49:40 - Time from start to end of loading essentials: 1.9862110614776611s
+INFO @ 23:49:40 - Created window
+DEBUG @ 23:49:40 - Sky and ground has been created.
+INFO @ 23:49:40 - User Interface has been created
+DEBUG @ 23:49:40 - Player created.
+INFO @ 23:49:40 - Window parameters has been updated.
+DEBUG @ 23:49:40 - Enemy tester entity has been created
+INFO @ 23:49:40 - Loading done in 2.4963109493255615s
+COSM  @ 23:49:40 - - - - - End of Loading LOG     
+DEBUG @ 23:49:43 - User pressed key: q
+DEBUG @ 23:49:43 - User pressed key: q up
+DEBUG @ 23:49:50 - User pressed key: meta
+DEBUG @ 23:49:50 - User pressed key: lmeta
+DEBUG @ 23:49:50 - User pressed key: meta up
+DEBUG @ 23:49:50 - User pressed key: lmeta up
+DEBUG @ 23:49:55 - User pressed key: meta
+DEBUG @ 23:49:55 - User pressed key: lmeta
+DEBUG @ 23:49:55 - User pressed key: meta up
+DEBUG @ 23:49:55 - User pressed key: lmeta up
+DEBUG @ 23:49:56 - User pressed key: e
+DEBUG @ 23:49:56 - User pressed key: e up
+DEBUG @ 23:49:56 - User pressed key: meta
+DEBUG @ 23:49:56 - User pressed key: lmeta
+DEBUG @ 23:49:57 - User pressed key: meta up
+DEBUG @ 23:49:57 - User pressed key: lmeta up

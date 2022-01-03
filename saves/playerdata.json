@@ -1,5 +1,9 @@
 {
     "best_score":0,
-    "average_score":0
+    "average_score":0,
+    "last_score":0,
+
+    "longtimeStats_classicsKilled":0,
+    "longtimeStats_advancedKilled":0
     
 }

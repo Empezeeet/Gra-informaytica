@@ -1,5 +1,12 @@
 {
     "files.exclude": {
-        "**/.DS_Store": false
+        "**/.DS_Store": true,
+        "**/__pycache__":true,
+        "**/.gitignore":true,
+        "**/README.md":true
     }
+    //Te pliki i foldery są wylaczone z explorera poniewaz nie sa wykorzystywane przy normalnej pracy
+    //Jeśli chcesz z nich skorzystać zmien True na False. Pamietaj aby pozniej przywrocic te wartosci
+    
+    
 }

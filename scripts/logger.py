@@ -1,4 +1,5 @@
 #Logging module.
+sr = True
 
 try:
     import scripts.exceptions
@@ -12,8 +13,9 @@ except ModuleNotFoundError as err:
     raise ModuleNotFoundError(err)
 
 class Logger(threading.Thread):
-
+    
     def __init__(self, filename, allowSysInfo, runID):
+        self.sr = True
         self.filename = filename
         file = open(file=self.filename, mode='a+')
         file.close()

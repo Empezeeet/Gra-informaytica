@@ -1,49 +1,58 @@
 #Simple tower defense game.
 #Copyright 2021-2022, Empezeeet, All rights reserved.
 
-#If you dont have some of this packages game will crash with error saying you dont have specific package
+#If you dont have some of this packages game will crash with error saying you dont have specific package()
 #*----PROGRAMMER NOTES:
 #NOTE 1: 'app = Ursina()' must be one of the first declarations. Longer time from start to declaration means more gliched game.
 #NOTE 2: NEVER put these keys in IF in input(key) function:
 #NOTE 2.1: ['meta', 'meta up', 'control', 'control up', 'alt', 'alt up']
-#NOTE 3:
+#NOTE 3: SimpleBots should be used as ClassicEnemy while AdvancedBots should be as Bosses
 #*----PROGRAMMER NOTES
+
 
 import time
 import json
 start = time.time()
-
+gamedata_Settings = None
+FATAL_dataToLog = {} # Only FATAL
 #Reading Saves - Gamedata
-with open("saves/_gamedata.json") as gamedata_f:
-    gamedata = gamedata_f.read()
+try:
+    with open("saves/_gamedata.json") as gamedata_f:
+        gamedata = gamedata_f.read()
 
-gamedata_Settings = json.loads(gamedata)
-del gamedata, gamedata_f
-
+    gamedata_Settings = json.loads(gamedata)
+    del gamedata, gamedata_f
+except:
+    FATAL_dataToLog['msg1'] = "GameSettings cannot be imported! Game may not work properly!"
+    gamedata_Settings = None
 
 try:
-    import scripts.lights as __lights
+    #Own Scripts
+   # import scripts.lights as __lights
     import scripts.logger as __logger
     import scripts.bots as __bots
     import scripts.exceptions as __exceptions
     import scripts.threads as __threads
-
+    #Other  
     from ursina import *
     from ursina.prefabs.first_person_controller import FirstPersonController
+    import ursina.prefabs.memory_counter as EngineMC
     import threading 
     from datetime import datetime
     import os
     import random
-    
-    #DEBUG
-    import platform
-    import cpuinfo
-    import psutil
 except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
 
-app = Ursina()
-app_process = psutil.Process(os.getpid())
+if __logger.sr is True:
+    app = Ursina(vsync=True, show_ursina_splash=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
+                         #VSync sets maxFramerate to your monitor Hz Value
+                         # 60Hz == max 60FPS
+                         # 75Hz == max 75FPS
+                         # 144Hz == max 144FPS
+
+
+
 
 run_date = datetime.now().strftime("%d\%m\%Y-%H:%M:%S")
 runID = random.randint(10000, 99999)
@@ -56,7 +65,6 @@ with open("saves/__logdata.json") as logdata_f:
             runID = random.randint(10000, 99999)
 del logdata_f, logdata, logdata_IDs
             
-
 
 
 
@@ -85,7 +93,17 @@ if (len(logs_folder) > 3):
 
 
 del logs_folder
+if gamedata_Settings == None:
+    gamedata_Settings = {
+        "app_allow_log_sysInfo":0
+    }
 logger = __logger.Logger(f"logs/#{runID}-test-run-{run_date}.log", gamedata_Settings['app_allow_log_sysInfo'], runID)
+
+if len(FATAL_dataToLog) > 0:
+    for i in FATAL_dataToLog:
+        logger.FATAL(FATAL_dataToLog[i])
+del FATAL_dataToLog
+
 
 try:
     if filename != None:
@@ -132,7 +150,15 @@ logger.INFO("User Interface has been created")
 
 
 #*----Player Settings:
-player_platform = Entity(model='cube', collider='mesh', color=color.rgba(255, 255, 255, 0), position= (0, 50, 0), scale=(1, 0.01, 1))
+player_platform = Entity(model='cube', collider='box', color=color.rgb(255, 255, 255), scale=(0.01, 0.01, 0.01))
+
+if gamedata_Settings['app_debug_mode'] == "True":
+    player_platform.position = (0, 50, 0)
+elif gamedata_Settings['app_debug_mode'] == "False":
+    player_platform.position = (0, 20, 0)
+else:
+    logger.FATAL("Pobieranie danych gry przebiegło nieprawidłowo.")
+    raise __exceptions.ImportingError("Game settings not loaded properly!")
 
 player = FirstPersonController(position= (0, 50.02, 0), jump_height=gamedata_Settings['player_jump_height'], speed=gamedata_Settings['player_speed'])
 player_health = gamedata_Settings['player_health']
@@ -140,9 +166,12 @@ logger.DEBUG("Player created.")
 #*----Player Settings
 
 
+
 #*----Window Settings:
 window.title = gamedata_Settings['app_window_text'] # wyglada jak losowe znaki ale to bedzie Tower defense
 window.fullscreen = gamedata_Settings['app_fullscreen']
+window.exit_button.visible = False
+
 logger.INFO("Window parameters has been updated.")
 #*----Window Settings
 
@@ -158,100 +187,136 @@ logger.DEBUG("Enemy tester entity has been created")
 enemies = __bots.SimpleBots(health=10, speed=1, howmuch=5)
 
 enemiesSpawned = False
-advancedEnemy = __bots.AdvancedBots(speed=1, health=10, spawnPos=None)
+
 #*----Enemies' Settings
 memoryUsage_Text.disable()
 coordinates_Text.disable()
+logger.INFO("DebugMode UI Labels has been Disabled")
 
+
+
+GameOver = False
+
+GameScore = 0
+
+   
+gameStatus_Text.color = color.black
+gameStatus_Text.text = "Press R to start game"
+
+logger.DEBUG("AdvancedEnemy Entity has been assigned")
 def input(key):
     logger.DEBUG(f"User pressed key: {key}")
+
+    if key == 'r':
+        gameStatus_Text.color = color.red
+        gameStatus_Text.text = ""
+        gameMaster(name="GameMaster-Thread").start()
+
+
+
     if key == 'b':
-        player.position = (0, 7, 0)
+        player.position = (0, 50.05, 0)
     if key == 'f':
         player.speed += 2
     if key == 'g':
         player.speed -= 2
-    if key == 'r':
-        advancedEnemy.attack_goCloser()
     if key == 'x':
         logger.INFO("Exited app as userExit()")
         app.userExit()
     if key == 'e':
-        enemies.goCloser()
+        enemiesTestingAI().start()
         
+    if key == '9':
+        if SBK_threadRunning is not True:
+            SimpleBots_Killer(name="SBKiller-Thread").start()
     if key == 'q':
-        enemiesSpawned = True
-        enemies.spawn(None)
         
+        enemies.spawn(None)
     if key == '[':
-        enemies_spawnTest(name="EnemiesSpawnTest").start()
+        breakpoint()
     if key == "o":
         Sky.color = color.white
     if key == "p":
         Sky.color = color.black
-    if key == "v":
-        advancedEnemy.spawn()
-    if key == "b":
-        pass
     if key == "f3":
+        collidersStatus = False
         #Show Debug Info
+        if enemies.enemies_SpawnStatus == True:
+            for i in range(enemies.quantity):
+                enemies.enemy_objVars[f'enemy{i}'].collider.visible = not collidersStatus
+            collidersStatus = not collidersStatus
         memoryUsage_Text.enabled = not memoryUsage_Text.enabled
-        coordinates_Text.enabled = not coordinates_Text.enable
+        coordinates_Text.enabled = not coordinates_Text.enabled
 
-        
+SBK_threadRunning = False
 
+#Thread Classes
         
+class enemiesTestingAI(threading.Thread):
+    def run(self):
+        randomDeathTime = random.randint(11, 16)
+        while True:
+            enemies.goCloser(True)
+            print(randomDeathTime)
+            if time.time() - enemies.lifeTimer >= randomDeathTime:
+                print("wow")
+                for i in range(enemies.quantity):
+                    enemies.enemy_objVars[f'enemy{i}'].collider = None
+                    enemies.enemy_objVars[f'enemy{i}'].scale = 0
+                    enemies.enemy_objVars[f'enemy{i}'].disable()
+                    
+                enemies.enemies_SpawnStatus = False
+                break
+
+class SimpleBots_Killer(threading.Thread):
+    def run(self):
+        SBK_threadRunning = True
+        try:
+            while True:
+                if enemies.enemies_SpawnStatus == True:
+                    print("Enemies are spawned!")
+                    if mouse.hovered_entity is not None:
+                        print("MouseHoveredEntity is not None!")
+                        for i in range(enemies.quantity):
+                                if mouse.hovered_entity.name == f"Enemy{i}":
+                                    print("MouseHoveredEntity is Enemy!") 
+                                    while mouse.hovered_entity.name == f"Enemy{i}":
+                                        enemies.enemy_CanMove[f'enemy{i}'] = False
+                                        print("Enemy's canMove Parameter set to False!")
+                                        time.sleep(.75)
+                                if mouse.hovered_entity.name != f'Enemy{i}':
+                                    enemies.enemy_CanMove[f'enemy{i}'] = True
+                time.sleep(.75)
+        except:
+            logger.ERROR("Exception Occured! in 99% of cases this is AttributeError. If it really is you don't need to worry!")
+
+class gameMaster(threading.Thread):
+    def run(self):
+        pass
+
+class NewUpdate(threading.Thread):
+    def run(self):
+        while True:
+            time.sleep(1)
+
+MC = EngineMC.MemoryCounter()
+
 
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
-    ram_usage = int(app_process.memory_info().rss) * 0.000001
-    memoryUsage_Text.text = f"RAM: {str(round(ram_usage, 0))}MB"
-    if enemiesSpawned:
-        for i in enemies.enemy_objVars:
-            if enemies.enemy_objVars[i].position.xz == (0, 0):
-                enemies.enemy_objVars[i].disable()
-                del enemies.enemy_objVars[i]
-                # gameOver()
-                # break
-def gameOver():
-    logger.INFO("[- - - - - - GAME OVER - - - - -]")
-    gameStatus_Text.text = "Game Over!"
-
-class enemies_spawnTest(threading.Thread):
-    def run(self):
-        for i in range(1000):
-            enemies.spawn(None)
-            gameStatus_Text.text = f"Iteration no. {i}"
-            time.sleep(.1)
-
-
-
-
-# class enemy1_AI(Thread):
-#     def run(self):
-#         while True:
-#             #this function should update once a second
-#             enemy1.attack_goCloser()
-#             logger.INFO("Enemy1 moved closer.")
-#             print(enemy1.bot.position)
-#             if enemy1.bot.position.xz == (0, 0):
-#                 gameStatus_Text.text = "Game Over!"
-#                 break
-#             time.sleep(1)
-class enemiesAI(threading.Thread):
-    pass    
-
-class updateAfterSecond(threading.Thread):
-    def run(self):
-        #enemy1.bot.color = color.random_color()
-        time.sleep(1)
-
 
 end = time.time()
 logger.INFO(f"Loading done in {end - start}s")
 logger.COSMETIC("- - - - End of Loading LOG     ")
 
-del start, end
 
+
+
+
+
+
+del start, end
 app.run()
 logger.FATAL("This shouldn't show up. If you can see this in logs you should check for gliches")
+
+

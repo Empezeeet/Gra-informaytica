@@ -4,7 +4,7 @@ class Error(Exception):
     """Base class for other exceptions"""
     pass
 
-class WrongValue(Error):
+class InvalidValue(Error):
     """Raised when variable has wrong value."""
     pass
 
@@ -23,3 +23,5 @@ class OutOfMemory(Error):
 class UnknownModule(Error):
     """Raises when script wants to import package that is not installed."""
     pass    
+class ImportingError(Error):
+    """Raises when value is not loaded from settings file."""

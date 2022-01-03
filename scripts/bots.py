@@ -14,28 +14,63 @@ try:
     import threading
     from threading import Thread
     import scripts.exceptions as __exceptions
+    
     #import ginger #Testing for NoModuleFound Exception
     #import giinger
 except ModuleNotFoundError as exception_err:
     raise ModuleNotFoundError(f"{exception_err}")
 
+
+
+
+
+
+
+
+
+
+#SimpleBots' bot life time = 10 seconds
+
 class SimpleBots:
     enemy_objVars = { }
+    
     enemy_spawnAttributes = { }
     enemies_directions = { }
+    enemies_health = { }
+    enemies_spawnCoords = { }
+    enemy_CanMove = { }
+    enemies_SpawnStatus = False #True - Spawned, False - Not Spawned
+    lifeTimer = None
+
     def __init__(self, **kwargs):
-        self.health = kwargs.get('health')
+
+
+        self.health = kwargs.get('health', 10)
         self.speed = kwargs.get('speed', 1)
         self.quantity = kwargs.get('howmuch')
         self.model = 'cube'
         self.color = color.rgb(255, 50, 50)
         self.scale = 2.5
         self.enemy_spawnAttributes = {
-            "model":self.model,
+            "model":'models/test3.obj',
             "scale":self.scale,
+            "collider":'box'
         }
-    def spawn(self, dictPosition):
-        """dictPosition (best logic name) - you need to type positions of bots in dict """
+        self.update()
+        for i in range(self.quantity):
+            self.enemies_health[f'enemy{i}'] = self.health
+    def update(self):
+        while self.enemies_SpawnStatus:
+            for i in range(self.quantity):
+                if self.lifeTimer - time.time() == 10:
+                    destroy(self.enemy_objVars[f'enemy{i}'])
+            
+            
+    def spawn(self, *args):
+        self.lifeTimer = time.time()
+        print(self.lifeTimer)
+        """spawn """
+        self.enemies_SpawnStatus = True
         for i in range(self.quantity):
 
             xPos = random.randint(-24, 24)
@@ -50,11 +85,19 @@ class SimpleBots:
 
             self.enemy_objVars[f'enemy{i}'] = Entity(
                 **self.enemy_spawnAttributes, 
-                position=(xPos, 1, zPos),
-                color=color.random_color()
+                position=(xPos, 2, zPos),
+                color=color.rgb(255, 90, 90),
+                name=f"Enemy{i}"
             )
-    def testing(self):
-        print(str(self.getDirection()) + "\n")
+
+            self.enemies_spawnCoords[f'enemy{i}'] = (xPos, 2, zPos)
+            self.enemy_CanMove[f'enemy{i}'] = True
+            time.sleep(.01)
+
+
+
+
+
     def getDirection(self):
         for i in range(self.quantity):
             #print(self.enemy_objVars[f'enemy{i}'].position.x) #For testing purposes
@@ -80,33 +123,36 @@ class SimpleBots:
         #     print(f"X: {self.enemies_directions[f'enemy{i}_x']}, Z: {self.enemies_directions[f'enemy{i}_z']}")
         #     print("- - - - POS - - - -\n")
         # print(self.enemies_directions)
-    def goCloser(self):
+    def goCloser(self, isThread=False, **kwargs):
         for i in range(self.quantity):
-            #Both are positive
-            if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
-                self.enemy_objVars[f'enemy{i}'].position += (-1, 0, -1)
-            #Both are negative
-            if (self.enemy_objVars[f'enemy{i}'].position.x < 0) and (self.enemy_objVars[f'enemy{i}'].position.z < 0):
-                self.enemy_objVars[f'enemy{i}'].position += (1, 0, 1)
-            #X is negative & Z is positive
-            if (self.enemy_objVars[f'enemy{i}'].position.x < 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
-                self.enemy_objVars[f'enemy{i}'].position += (1, 0, -1)
-            #X is positive & Z is negative
-            if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z < 0):
-                self.enemy_objVars[f'enemy{i}'].position += (-1, 0, 1)
-            #X is 0 & Z is positive
-            if (self.enemy_objVars[f'enemy{i}'].position.x == 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
-                self.enemy_objVars[f'enemy{i}'].position += (0, 0, -1)
-            #X is 0 & Z is negatve
-            if (self.enemy_objVars[f'enemy{i}'].position.x == 0) and (self.enemy_objVars[f'enemy{i}'].position.z < 0):
-                self.enemy_objVars[f'enemy{i}'].position += (0, 0, 1)
-            #X is positive & Z is 0
-            if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z == 0):
-                self.enemy_objVars[f'enemy{i}'].position += (-1, 0, 0)
-            #X is negative & Z is 0
-            if (self.enemy_objVars[f'enemy{i}'].position.x < 0) and (self.enemy_objVars[f'enemy{i}'].position.z == 0):
-                self.enemy_objVars[f'enemy{i}'].position += (1, 0, 0)
-
+            if self.enemy_CanMove[f'enemy{i}']:
+                #Both are positive
+                if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (-1, 0, -1)
+                #Both are negative
+                if (self.enemy_objVars[f'enemy{i}'].position.x < 0) and (self.enemy_objVars[f'enemy{i}'].position.z < 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (1, 0, 1)
+                #X is negative & Z is positive
+                if (self.enemy_objVars[f'enemy{i}'].position.x < 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (1, 0, -1)
+                #X is positive & Z is negative
+                if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z < 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (-1, 0, 1)
+                #X is 0 & Z is positive
+                if (self.enemy_objVars[f'enemy{i}'].position.x == 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (0, 0, -1)
+                #X is 0 & Z is negatve
+                if (self.enemy_objVars[f'enemy{i}'].position.x == 0) and (self.enemy_objVars[f'enemy{i}'].position.z < 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (0, 0, 1)
+                #X is positive & Z is 0
+                if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z == 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (-1, 0, 0)
+                #X is negative & Z is 0
+                if (self.enemy_objVars[f'enemy{i}'].position.x < 0) and (self.enemy_objVars[f'enemy{i}'].position.z == 0):
+                    self.enemy_objVars[f'enemy{i}'].position += (1, 0, 0)
+                #If its called from thread, moves of bots can move not together
+                if isThread == True:
+                    time.sleep(round(random.uniform(0.1, 0.3), 1))
 
 
 
@@ -115,17 +161,21 @@ class SimpleBots:
 
 
         
-    
-class AdvancedBots():
-    bot = Entity()
-    bot_health = None
+#Differences between SimpleBots & AdvancedBot are:
+#SimpleBots contols group of bots, AdvancedBot controls one bot per assignment to variable
+#
+#
+
+class AdvancedBot(Entity):
+    bot = None
 
     def __init__(self, **kwargs):
         """
         Acceptable arguments are health, speed and spawnPos:
         - speed is measured in moves per second(MPS) set by deafult to 1
         - health is measuerd in attack it can survive set by deafult to 10
-        - spawnPos is Vec3 variable, leave None if you want to set position to random"""
+        - spawnPos is Vec3 variable, leave None if you want to set position to random
+        """
         self.health = kwargs.get('health', 10)
         self.speed = kwargs.get('speed', 1)
         self.spawnPos = kwargs.get('spawnPos', None)
@@ -139,72 +189,50 @@ class AdvancedBots():
                 while (zPos < 5) and (zPos > -5):
                     zPos = random.randint(-24, 24)
             self.spawnPos = (xPos, 2, zPos)
+        
 
         
-    def spawn(self, **kwargs):
-        bot = Entity(model='cube', collider='box', color=color.red, position=self.spawnPos)
-             
-    
-    def takeDamage(self, howMuch=1):
-        print(f"Wow! dat hurts! {self.health}")
-        self.health -= howMuch
-        self.bot_health = self.health
-        if self.health <= 0:
-            self.bot.color = color.rgb(255, 100, 150)
+    def spawn(self):
+        self.bot = Entity(model='cube', color=color.rgb(255, 50, 50), position=self.spawnPos, scale=2)
         
     def rtp(self):
         """Random teleport for bot"""
-        self.bot.position = (random.randint(-10, 10), 2, random.randint(-10, 10))
+        #self.bot.position = (random.randint(-10, 10), 2, random.randint(-10, 10))
+        xPos = random.randint(-24, 24)
+        zPos = random.randint(-24, 24)
+        if (xPos <= 5) and (xPos >= -5):
+            while (xPos < 5) and(xPos > -5):
+                xPos = random.randint(-24, 24)
+        if (zPos < 5) and (zPos > -5):
+            while (zPos < 5) and (zPos > -5):
+                zPos = random.randint(-24, 24)
+        self.bot.position = (xPos, 2, zPos)
     
-    def get_direction(self, wichone: str):
-        
-        x_direction = None # True = (+) False = (-) None = 0 (In This case its just for creating variable)
-        z_direction = None # True = (+) False = (-) None = 0 (In This case its just for creating variable)
-
-        if self.bot.position.x > 0:
-            x_direction = True
-        if self.bot.position.x < 0:
-            x_direction = False
-        if self.bot.position.z > 0:
-            z_direction = True
-        if self.bot.position.z < 0:
-            z_direction = False
-        
-        if self.bot.position.x == 0:
-            x_direction = None
-        if self.bot.position.z == 0:
-            z_direction = None
-        
-        try:
-            if wichone == 'x':
-                return x_direction
-            if wichone == 'z':
-                return z_direction
-            if wichone == 'xz':
-                xz = [x_direction, z_direction]
-                return(xz)
-            if (wichone == None) or (wichone != "x") or (wichone != "z") or (wichone != "xz"):
-                raise ValueError()
-        except ValueError:
-            raise __exceptions.WrongValue("Value 'wichone' is not defined properly!\n Accepted values are:\n-x,\n-xz,\n-xz")
-
+    
     def attack_goCloser(self):
-        x = self.get_direction('x')
-        z = self.get_direction('z')
-
-        if (x == True) and (z == True): #All positive
-            self.bot.position -= (1, 0, 1)
-        if (x == False) and (z == False): #All negative
+        print(self.bot)
+        if (self.bot.position.x > 0) and (self.bot.position.z > 0): #Both Positive
+            print(1)
+            self.bot.position += (-1, 0, -1)
+        if (self.bot.position.x < 0) and (self.bot.position.z < 0): #Both Negative
+            print(2)
             self.bot.position += (1, 0, 1)
-        if (x == True) and (z == False): # X is positive and Z is negative
+        if (self.bot.position.x > 0) and (self.bot.position.z < 0): #X - Positive, Z - Negative
+            print(3)
             self.bot.position += (-1, 0, 1)
-        if (x == False) and (z == True): # X is negative and Z is positive
+        if (self.bot.position.x < 0) and (self.bot.position.z > 0): #X - Negative, Z - Positive
+            print(4)
             self.bot.position += (1, 0, -1)
-        if (x == None) and (z == True):
-            self.bot.position -= (0, 0, 1)
-        if (x == None) and (z == False):
+        if (self.bot.position.x == 0) and (self.bot.position.z > 0): #X - None, Z - Positive
+            print(5)
+            self.bot.position += (0, 0, -1)
+        if (self.bot.position.x == 0) and (self.bot.position.z < 0): #X - None, Z - Negative
+            print(6)
             self.bot.position += (0, 0, 1)
-        if (x == True) and (z == None):
-            self.bot.position -= (1, 0, 0)
-        if (x == False) and (z == None):
+        if (self.bot.position.x > 0) and (self.bot.position.z == 0): #X - Positive, Z - None
+            print(7)
+            self.bot.position += (-1, 0, 0)
+        if (self.bot.position.x < 0) and (self.bot.position.z == 0): #X - Negative, Z - None
+            print(8)
             self.bot.position += (1, 0, 0)
+    

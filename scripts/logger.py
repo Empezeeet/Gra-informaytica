@@ -17,7 +17,7 @@ class Logger(threading.Thread):
     def __init__(self, filename, allowSysInfo, runID):
         self.sr = True
         self.filename = filename
-        file = open(file=self.filename, mode='a+')
+        file = open(file=str(filename), mode='a')
         file.close()
         if allowSysInfo == 1:
             self.DEBUG("- - - - - - - SYSTEM INFO - - - - - - -")

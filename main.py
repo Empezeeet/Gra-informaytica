@@ -51,30 +51,24 @@ if __logger.sr is True:
                          # 75Hz == max 75FPS
                          # 144Hz == max 144FPS
 
-
-
-
 run_date = datetime.now().strftime("%d\%m\%Y-%H:%M:%S")
 runID = random.randint(10000, 99999)
 #Reading Saves - LogData
-with open("saves/__logdata.json") as logdata_f:
-    logdata = logdata_f.read()
-    logdata_IDs = json.loads(logdata)
-    for i in logdata_IDs['used_IDs']:
-        while runID != i:
-            runID = random.randint(10000, 99999)
-del logdata_f, logdata, logdata_IDs
-            
 
-
-
-
+with open("saves/_logdata.olVar", mode="r+") as olvFile:
+    data = olvFile.readlines()
+    for i in range(len(data)):
+        if data[i] == runID:
+            while data[i] != runID:
+                runID = random.randint(10000, 99999)
+    runID_str = str(runID) + "\n"
+    olvFile.write(runID_str)
+del data, runID_str, olvFile
 
 
 #Reading Saves - Playerdata
 with open("saves/playerdata.json") as playerdata_f:
     playerdata = playerdata_f.read()
-
 player_data = json.loads(playerdata)
 del playerdata, playerdata_f
 
@@ -97,7 +91,8 @@ if gamedata_Settings == None:
     gamedata_Settings = {
         "app_allow_log_sysInfo":0
     }
-logger = __logger.Logger(f"logs/#{runID}-test-run-{run_date}.log", gamedata_Settings['app_allow_log_sysInfo'], runID)
+
+logger = __logger.Logger(f"logs/#{runID}-test-run.log", gamedata_Settings['app_allow_log_sysInfo'], runID)
 
 if len(FATAL_dataToLog) > 0:
     for i in FATAL_dataToLog:
@@ -113,7 +108,7 @@ except NameError:
     raise __exceptions.NoObject("Zmienna 'filename' nie została zdefiniowana. Sprawdź logi aby dowiedzieć się dlaczego.")
 
 
-
+logger.INFO(f"Time: {run_date}\n")
 logger.DEBUG("- - -  - - - - APP SETTINGS - - - - - - -")
 logger.DEBUG(f"App Window Text: {gamedata_Settings['app_window_text']}")
 logger.DEBUG(f"App Allow Log SysInfo: {gamedata_Settings['app_allow_log_sysInfo']}")

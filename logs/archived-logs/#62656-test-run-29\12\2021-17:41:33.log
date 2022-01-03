@@ -1,9 +1,0 @@
-DEBUG @ 17:41:33 - - - - - - - - SYSTEM INFO - - - - - - -
-DEBUG @ 17:41:33 - System: macOS-12.1-arm64-arm-64bit
-DEBUG @ 17:41:34 - Processor: Apple M1
-DEBUG @ 17:41:34 - Node: Macbook.fritz.box
-DEBUG @ 17:41:34 - Version: Darwin Kernel Version 21.2.0: Sun Nov 28 20:29:10 PST 2021; root:xnu-8019.61.5~1/RELEASE_ARM64_T8101
-DEBUG @ 17:41:34 - RunID: 62656
-DEBUG @ 17:41:34 - - - - - - - - SYSTEM INFO - - - - - - -
-
-FATAL @ 17:41:34 - Zmienna 'filename' nie została zdefiniowana, co onznacza że archwizowanie plików .log zostało zakończone błędem

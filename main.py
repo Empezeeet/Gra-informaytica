@@ -308,7 +308,6 @@ class NewUpdate(threading.Thread):
 
 MC = EngineMC.MemoryCounter()
 
-Cursor = Cursor()
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
 

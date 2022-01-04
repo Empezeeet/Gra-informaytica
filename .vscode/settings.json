@@ -1,6 +1,6 @@
 {
     "files.exclude": {
-        "**/.DS_Store": true,
+        "**/.DS_Store": false,
         "**/__pycache__":true,
         "**/.gitignore":false,
         "**/README.md":true

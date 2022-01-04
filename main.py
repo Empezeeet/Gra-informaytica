@@ -13,6 +13,11 @@
 import time
 import json
 start = time.time()
+
+if __name__ != "__main__":
+    raise RuntimeError("Script must be launched as __main__")
+
+
 gamedata_Settings = None
 FATAL_dataToLog = {} # Only FATAL
 #Reading Saves - Gamedata
@@ -28,19 +33,22 @@ except:
 
 try:
     #Own Scripts
-   # import scripts.lights as __lights
-    import scripts.logger as __logger
-    import scripts.bots as __bots
-    import scripts.exceptions as __exceptions
-    import scripts.threads as __threads
-    #Other  
-    from ursina import *
-    from ursina.prefabs.first_person_controller import FirstPersonController
-    import ursina.prefabs.memory_counter as EngineMC
-    import threading 
-    from datetime import datetime
-    import os
-    import random
+        import scripts.logger as __logger
+        import scripts.bots as __bots
+        import scripts.exceptions as __exceptions
+        import scripts.threads as __threads
+    #UrsinaEngine Packages
+        from ursina import *
+        from ursina.prefabs.first_person_controller import FirstPersonController
+        import ursina.prefabs.memory_counter as EngineMC
+        import ursina.prefabs.input_field as engineINFLD
+        import ursina.prefabs.debug_menu
+    #Other Packages
+        import threading 
+        from datetime import datetime
+        import os
+        import random
+
 except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
 
@@ -194,9 +202,10 @@ GameOver = False
 
 GameScore = 0
 
-   
-gameStatus_Text.color = color.black
+canMoveCamera = False
+
 gameStatus_Text.text = "Press R to start game"
+
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
 def input(key):
@@ -206,6 +215,8 @@ def input(key):
         gameStatus_Text.color = color.red
         gameStatus_Text.text = ""
         gameMaster(name="GameMaster-Thread").start()
+    if key == '1':
+        pass
 
 
 
@@ -219,7 +230,8 @@ def input(key):
         logger.INFO("Exited app as userExit()")
         app.userExit()
     if key == 'e':
-        enemiesTestingAI().start()
+        if enemiesSpawned:
+            enemiesTestingAI().start()
         
     if key == '9':
         if SBK_threadRunning is not True:
@@ -296,9 +308,10 @@ class NewUpdate(threading.Thread):
 
 MC = EngineMC.MemoryCounter()
 
-
+Cursor = Cursor()
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
+
 
 end = time.time()
 logger.INFO(f"Loading done in {end - start}s")
@@ -311,7 +324,12 @@ logger.COSMETIC("- - - - End of Loading LOG     ")
 
 
 del start, end
-app.run()
+try:
+    app.run()
+except Exception as err:
+    logger.FATAL("App cant run for some reason")
+    raise err
+
 logger.FATAL("This shouldn't show up. If you can see this in logs you should check for gliches")
 
 

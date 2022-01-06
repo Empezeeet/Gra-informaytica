@@ -12,10 +12,12 @@
 
 import time
 import json
+
+from ursina.window import Window
+
+
 start = time.time()
 
-if __name__ != "__main__":
-    raise RuntimeError("Script must be launched as __main__")
 
 
 gamedata_Settings = None
@@ -35,14 +37,14 @@ try:
     #Own Scripts
         import scripts.logger as __logger
         import scripts.bots as __bots
-        import scripts.exceptions as __exceptions
         import scripts.threads as __threads
+        import scripts.exceptions as __exceptions
+        import scripts.buttonFuncs as ButtonFuncs
     #UrsinaEngine Packages
         from ursina import *
         from ursina.prefabs.first_person_controller import FirstPersonController
         import ursina.prefabs.memory_counter as EngineMC
-        import ursina.prefabs.input_field as engineINFLD
-        import ursina.prefabs.debug_menu
+        import ursina.prefabs.editor_camera as EngineECAM
     #Other Packages
         import threading 
         from datetime import datetime
@@ -51,13 +53,16 @@ try:
 
 except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
-
 if __logger.sr is True:
-    app = Ursina(vsync=True, show_ursina_splash=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
+    app = Ursina(vsync=True, borderless=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
                          #VSync sets maxFramerate to your monitor Hz Value
                          # 60Hz == max 60FPS
                          # 75Hz == max 75FPS
                          # 144Hz == max 144FPS
+
+
+player = FirstPersonController(position= (0, 50.02, 0), jump_height=0, speed=0)
+
 
 run_date = datetime.now().strftime("%d\%m\%Y-%H:%M:%S")
 runID = random.randint(10000, 99999)
@@ -163,16 +168,20 @@ else:
     logger.FATAL("Pobieranie danych gry przebiegło nieprawidłowo.")
     raise __exceptions.ImportingError("Game settings not loaded properly!")
 
-player = FirstPersonController(position= (0, 50.02, 0), jump_height=gamedata_Settings['player_jump_height'], speed=gamedata_Settings['player_speed'])
-player_health = gamedata_Settings['player_health']
 logger.DEBUG("Player created.")
 #*----Player Settings
+
+#editorCamera = EngineECAM.EditorCamera(rotation_smoothing=2, enabled=0, rotation=(30, 30, 0))
+
+
+
 
 
 
 #*----Window Settings:
 window.title = gamedata_Settings['app_window_text'] # wyglada jak losowe znaki ale to bedzie Tower defense
-window.fullscreen = gamedata_Settings['app_fullscreen']
+
+
 window.exit_button.visible = False
 
 logger.INFO("Window parameters has been updated.")
@@ -181,8 +190,9 @@ logger.INFO("Window parameters has been updated.")
 
 #*----Enemies' Settings:
 enemy_testor = Entity(
-    model='sphere', collider='sphere',
-    color=color.rgb(100, 255, 0), scale=(2.5, 2.5, 2.5)
+    model='sphere',
+    color=color.rgb(10, 255, 100),
+    scale=(2.5, 2.5, 2.5)
 )
 enemy_testor.position = (10, 20, 10)
 logger.DEBUG("Enemy tester entity has been created")
@@ -192,6 +202,10 @@ enemies = __bots.SimpleBots(health=10, speed=1, howmuch=5)
 enemiesSpawned = False
 
 #*----Enemies' Settings
+
+#*----Advanced Enemy's Settings
+advancedEnemy = __bots.AdvancedBot()
+#*----Advanced Enemy's Settings
 memoryUsage_Text.disable()
 coordinates_Text.disable()
 logger.INFO("DebugMode UI Labels has been Disabled")
@@ -204,22 +218,62 @@ GameScore = 0
 
 canMoveCamera = False
 
-gameStatus_Text.text = "Press R to start game"
+#gameStatus_Text.text = "Press R to start game"
+def showHideControls():
+    UIPanel.enabled = not UIPanel.enabled
+    UIControlsPanel.enabled  = not UIControlsPanel.enabled
+
+
+UIControlsPanel = WindowPanel(
+    enabled=False,
+    title="Controls",
+    content=[
+        Text(text="Press 'Escape` to Open Game Menu"),
+        Text(text="Press 'Shift + Q' to Force Quit")
+    ]
+)
+
+UIPanel = WindowPanel(
+    enabled=False,
+    title="Menu",
+    content=[
+        Button(text='Controls', onclick=showHideControls, color=color.rgb(200, 0, 0)),
+        Button(text='Credits', on_click=ButtonFuncs.Functions.showCredits, color=color.rgb(50, 205, 200)),
+        Button(text='Exit Game', on_click=ButtonFuncs.Functions.AppExit, color=color.rgb(255, 100, 100))
+
+    ]
+)
+
+
+
+
+
 
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
 def input(key):
     logger.DEBUG(f"User pressed key: {key}")
+    if key == "escape":
+        
+        player.enabled = not player.enabled
+        UIPanel.enabled = not UIPanel.enabled
+        
+        
 
+    if key == "i":
+        global test
+        test = True
     if key == 'r':
         gameStatus_Text.color = color.red
         gameStatus_Text.text = ""
         gameMaster(name="GameMaster-Thread").start()
-    if key == '1':
-        pass
+    
 
 
-
+    if key == 'q':
+        global enemiesSpawned
+        enemiesSpawned = True
+        enemies.spawn(None)
     if key == 'b':
         player.position = (0, 50.05, 0)
     if key == 'f':
@@ -230,15 +284,14 @@ def input(key):
         logger.INFO("Exited app as userExit()")
         app.userExit()
     if key == 'e':
-        if enemiesSpawned:
+        print("Input E - player pressed E")
+        if enemiesSpawned is True:
+            print("Enemies are spawned")
             enemiesTestingAI().start()
         
     if key == '9':
         if SBK_threadRunning is not True:
             SimpleBots_Killer(name="SBKiller-Thread").start()
-    if key == 'q':
-        
-        enemies.spawn(None)
     if key == '[':
         breakpoint()
     if key == "o":
@@ -281,15 +334,15 @@ class SimpleBots_Killer(threading.Thread):
         try:
             while True:
                 if enemies.enemies_SpawnStatus == True:
-                    print("Enemies are spawned!")
+                    print("SBK - Enemies are spawned!")
                     if mouse.hovered_entity is not None:
-                        print("MouseHoveredEntity is not None!")
+                        print("SBK - MouseHoveredEntity is not None!")
                         for i in range(enemies.quantity):
                                 if mouse.hovered_entity.name == f"Enemy{i}":
-                                    print("MouseHoveredEntity is Enemy!") 
+                                    print("SBK - MouseHoveredEntity is Enemy!") 
                                     while mouse.hovered_entity.name == f"Enemy{i}":
                                         enemies.enemy_CanMove[f'enemy{i}'] = False
-                                        print("Enemy's canMove Parameter set to False!")
+                                        print("SBK - Enemy's canMove Parameter set to False!")
                                         time.sleep(.75)
                                 if mouse.hovered_entity.name != f'Enemy{i}':
                                     enemies.enemy_CanMove[f'enemy{i}'] = True
@@ -310,6 +363,7 @@ MC = EngineMC.MemoryCounter()
 
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
+    
 
 
 end = time.time()
@@ -323,11 +377,7 @@ logger.COSMETIC("- - - - End of Loading LOG     ")
 
 
 del start, end
-try:
-    app.run()
-except Exception as err:
-    logger.FATAL("App cant run for some reason")
-    raise err
+app.run()
 
 logger.FATAL("This shouldn't show up. If you can see this in logs you should check for gliches")
 

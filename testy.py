@@ -1,7 +1,13 @@
+#Random noise number average generator.
+
+
+
 import numpy as np
 import time
-from perlin_noise import PerlinNoise
+
 import matplotlib.pyplot as plt
+
+
 
 # noise = PerlinNoise(octaves=10, seed=1)
 # xpix, ypix = 100, 100
@@ -12,23 +18,27 @@ import matplotlib.pyplot as plt
 
 outputs = []
 
+start = time.time()
+for i in range(2):
+    for i in range(10000000):
+        noise = np.random.lognormal(0, 1, 1)
+        while (round(noise[0], 5) == 0.0):
+            noise = np.random.lognormal(0, 5, 100)
+        outputs.append(round(noise[0], 5))
+        #print(f" Iternation {i} -- {(round(noise[1], 5))}")
+        
+    x = 0.
+    print("\n Calculating...\n")
+
+    # for i in range(len(outputs)):
+    #     x += outputs[i]
+    #     print(f"\n X: {x} -- \n")
+    average = sum(outputs) / len(outputs)
 
 
-for i in range(100000):
-    noise = np.random.lognormal(0, 1, 10)
-    while ('e' in str(round(noise[1], 5))) or (round(noise[1], 5) == 0.0):
-        noise = np.random.lognormal(0, 5, 100)
-    outputs.append(round(noise[1], 5))
-    print((round(noise[1], 5)) * 10)
-    
-x = 0.
-print("\n Calculating...\n")
+    print("\n\n - - - - -\n\n")
+    print(f"Output Average is: {average}")
+    print(f"Calculation {i} time: {time.time() - start}sec")
+    print("\n\n - - - - -\n\n.")
 
-for i in range(len(outputs)):
-    x += outputs[i]
-    print(f"\n X: {x} -- \n")
-print("\n\n - - - - -\n\n")
-print((x/len(outputs)) * 0.1)
-print("\n\n - - - - -\n\n.")
-
-
+print(f"\n\n\nFull Calculation time: {time.time() - start}seconds")

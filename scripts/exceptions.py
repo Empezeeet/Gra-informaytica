@@ -25,3 +25,9 @@ class UnknownModule(Error):
     pass    
 class ImportingError(Error):
     """Raises when value is not loaded from settings file."""
+    pass
+
+class RunError(Error):
+    """Should be raised when script is not (or is) launched as __main__"""
+    pass
+

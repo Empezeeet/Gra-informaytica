@@ -19,6 +19,7 @@ class Functions:
         def __init__(self) -> None:
             engine.application.quit()
     class showCredits:
-        def __init__(self) -> None:
+        def __init__(self):
             pass
+            
         

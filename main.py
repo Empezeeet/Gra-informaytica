@@ -13,7 +13,7 @@
 import time
 import json
 
-from ursina.window import Window
+
 
 
 start = time.time()
@@ -41,6 +41,7 @@ try:
         import scripts.exceptions as __exceptions
         import scripts.buttonFuncs as ButtonFuncs
     #UrsinaEngine Packages
+        print("prze import")
         from ursina import *
         from ursina.prefabs.first_person_controller import FirstPersonController
         import ursina.prefabs.memory_counter as EngineMC
@@ -50,17 +51,25 @@ try:
         from datetime import datetime
         import os
         import random
+        from AppKit import NSScreen
 
 except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
-if __logger.sr is True:
-    app = Ursina(vsync=True, borderless=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
+
+print("po import")
+window.forced_aspect_ratio = 16/10
+camera.fov = 90
+
+
+if __name__ == "__main__'":
+    app = Ursina(vsync=True, borderless=False, fullscreen=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
                          #VSync sets maxFramerate to your monitor Hz Value
                          # 60Hz == max 60FPS
                          # 75Hz == max 75FPS
                          # 144Hz == max 144FPS
-
-
+else:
+    exit()
+print("po deklaracji")
 player = FirstPersonController(position= (0, 50.02, 0), jump_height=0, speed=0)
 
 
@@ -219,44 +228,48 @@ GameScore = 0
 canMoveCamera = False
 
 #gameStatus_Text.text = "Press R to start game"
-def showHideControls():
-    UIPanel.enabled = not UIPanel.enabled
-    UIControlsPanel.enabled  = not UIControlsPanel.enabled
 
+CreditsPanel =  WindowPanel(
+                enabled=False,
+                title='Credits',
+                
+                content=[
+                    Text(text="Programmer: Empezeeet"),
+                    Text(text="2nd Programmer: Kubix"),
+                    Text(text="Models: Empezeeet & Kubix"),
+                    Text(text='')
+                ]
+            )
 
-UIControlsPanel = WindowPanel(
-    enabled=False,
-    title="Controls",
-    content=[
-        Text(text="Press 'Escape` to Open Game Menu"),
-        Text(text="Press 'Shift + Q' to Force Quit")
-    ]
-)
+        
+def showCredits():
+    CreditsPanel.enabled = not CreditsPanel.enabled
 
 UIPanel = WindowPanel(
     enabled=False,
+    popup=True,
     title="Menu",
     content=[
-        Button(text='Controls', onclick=showHideControls, color=color.rgb(200, 0, 0)),
-        Button(text='Credits', on_click=ButtonFuncs.Functions.showCredits, color=color.rgb(50, 205, 200)),
+        InputField(name="Cheat Cod"),
         Button(text='Exit Game', on_click=ButtonFuncs.Functions.AppExit, color=color.rgb(255, 100, 100))
 
     ]
 )
 
 
+def UIPanelEnableDisable():
+    player.enabled = not player.enabled
+    UIPanel.enabled = not UIPanel.enabled
 
-
-
+UIPanel.bg.on_click = UIPanelEnableDisable
 
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
 def input(key):
     logger.DEBUG(f"User pressed key: {key}")
     if key == "escape":
-        
-        player.enabled = not player.enabled
-        UIPanel.enabled = not UIPanel.enabled
+        UIPanelEnableDisable()
+       
         
         
 
@@ -281,8 +294,8 @@ def input(key):
     if key == 'g':
         player.speed -= 2
     if key == 'x':
-        logger.INFO("Exited app as userExit()")
-        app.userExit()
+        logger.INFO("Exited app as application.quit())")
+        application.quit()
     if key == 'e':
         print("Input E - player pressed E")
         if enemiesSpawned is True:
@@ -363,7 +376,8 @@ MC = EngineMC.MemoryCounter()
 
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
-    
+
+
 
 
 end = time.time()

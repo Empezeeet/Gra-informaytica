@@ -54,21 +54,26 @@ class SimpleBots:
         self.enemy_spawnAttributes = {
             "model":'models/test3.obj',
             "scale":self.scale,
-            "collider":'box'
+            "collider":'box',
+            "texture":"textures/enemies/TWRDFN_Enemy.png"
         }
-        self.update()
+        self.update().start()
         for i in range(self.quantity):
             self.enemies_health[f'enemy{i}'] = self.health
-    def update(self):
-        while self.enemies_SpawnStatus:
-            for i in range(self.quantity):
-                if self.lifeTimer - time.time() == 10:
-                    destroy(self.enemy_objVars[f'enemy{i}'])
+    class update(threading.Thread):
+        def run(self):
+            while SimpleBots.enemies_SpawnStatus:
+                for i in range(SimpleBots.quantity):
+                    if SimpleBots.lifeTimer - time.time() >= 10:
+                        destroy(SimpleBots.enemy_objVars[f'enemy{i}'])
+                time.sleep(.5)
             
             
     def spawn(self, *args):
         self.lifeTimer = time.time()
         print(self.lifeTimer)
+        if len(self.enemy_objVars) is 5:
+            self.enemy_objVars.clear
         """spawn """
         self.enemies_SpawnStatus = True
         for i in range(self.quantity):
@@ -124,6 +129,7 @@ class SimpleBots:
         #     print("- - - - POS - - - -\n")
         # print(self.enemies_directions)
     def goCloser(self, isThread=False, **kwargs):
+     if len(self.enemy_objVars) is 5:
         for i in range(self.quantity):
             if self.enemy_CanMove[f'enemy{i}']:
                 #Both are positive
@@ -153,8 +159,8 @@ class SimpleBots:
                 #If its called from thread, moves of bots can move not together
                 if isThread == True:
                     time.sleep(round(random.uniform(0.1, 0.3), 1))
-
-
+     else: 
+        raise __exceptions.NoObject("Enemies are not spawned!")
 
 
 

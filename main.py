@@ -1,4 +1,4 @@
-#Simple tower defense game.
+#Simple tower defense game. Packages that you need:
 #Copyright 2021-2022, Empezeeet, All rights reserved.
 
 #If you dont have some of this packages game will crash with error saying you dont have specific package()
@@ -8,6 +8,7 @@
 #NOTE 2.1: ['meta', 'meta up', 'control', 'control up', 'alt', 'alt up']
 #NOTE 3: SimpleBots should be used as ClassicEnemy while AdvancedBots should be as Bosses
 #*----PROGRAMMER NOTES
+
 
 
 import time
@@ -51,7 +52,7 @@ try:
         from datetime import datetime
         import os
         import random
-        from AppKit import NSScreen
+        
 
 except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
@@ -61,7 +62,7 @@ window.forced_aspect_ratio = 16/10
 camera.fov = 90
 
 
-if __name__ == "__main__'":
+if __name__ == "__main__":
     app = Ursina(vsync=True, borderless=False, fullscreen=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
                          #VSync sets maxFramerate to your monitor Hz Value
                          # 60Hz == max 60FPS
@@ -220,7 +221,7 @@ coordinates_Text.disable()
 logger.INFO("DebugMode UI Labels has been Disabled")
 
 
-
+global GameOver
 GameOver = False
 
 GameScore = 0
@@ -245,23 +246,10 @@ CreditsPanel =  WindowPanel(
 def showCredits():
     CreditsPanel.enabled = not CreditsPanel.enabled
 
-UIPanel = WindowPanel(
-    enabled=False,
-    popup=True,
-    title="Menu",
-    content=[
-        InputField(name="Cheat Cod"),
-        Button(text='Exit Game', on_click=ButtonFuncs.Functions.AppExit, color=color.rgb(255, 100, 100))
-
-    ]
-)
 
 
-def UIPanelEnableDisable():
-    player.enabled = not player.enabled
-    UIPanel.enabled = not UIPanel.enabled
 
-UIPanel.bg.on_click = UIPanelEnableDisable
+
 
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
@@ -269,20 +257,10 @@ def input(key):
     logger.DEBUG(f"User pressed key: {key}")
     if key == "escape":
         UIPanelEnableDisable()
-       
-        
-        
-
     if key == "i":
-        global test
-        test = True
+        pass
     if key == 'r':
-        gameStatus_Text.color = color.red
-        gameStatus_Text.text = ""
-        gameMaster(name="GameMaster-Thread").start()
-    
-
-
+        startGame()
     if key == 'q':
         global enemiesSpawned
         enemiesSpawned = True
@@ -322,27 +300,37 @@ def input(key):
         coordinates_Text.enabled = not coordinates_Text.enabled
 
 SBK_threadRunning = False
-
+ETAI_threadRunnning = False
 #Thread Classes
-        
+
+
+
+
 class enemiesTestingAI(threading.Thread):
     def run(self):
-        randomDeathTime = random.randint(11, 16)
-        while True:
+        global ETAI_threadRunnning
+        ETAI_threadRunnning = True
+        try:
+            self.randomDeathTime = rndDeathTime
+        except:
+            self.randomDeathTime = 10
+        while enemies.enemies_SpawnStatus:
             enemies.goCloser(True)
-            print(randomDeathTime)
-            if time.time() - enemies.lifeTimer >= randomDeathTime:
-                print("wow")
+            print(self.randomDeathTime)
+            if time.time() - enemies.lifeTimer >= self.randomDeathTime:
+                print("Time reached end. Killing all SimpleBots!")
                 for i in range(enemies.quantity):
                     enemies.enemy_objVars[f'enemy{i}'].collider = None
                     enemies.enemy_objVars[f'enemy{i}'].scale = 0
                     enemies.enemy_objVars[f'enemy{i}'].disable()
-                    
                 enemies.enemies_SpawnStatus = False
                 break
+    def terminate(self):
+        self._running = False
 
 class SimpleBots_Killer(threading.Thread):
     def run(self):
+        global SBK_threadRunning
         SBK_threadRunning = True
         try:
             while True:
@@ -362,10 +350,48 @@ class SimpleBots_Killer(threading.Thread):
                 time.sleep(.75)
         except:
             logger.ERROR("Exception Occured! in 99% of cases this is AttributeError. If it really is you don't need to worry!")
+    def terminate(self):
+        self._running = False
 
 class gameMaster(threading.Thread):
+
+    SBKillerThread = SimpleBots_Killer(name="SBKiller-Thread")
+    enemiesAIThread = enemiesTestingAI(name="EnemiesAI-Thread")
+
     def run(self):
-        pass
+        self.randDthTime = random.randint(9, 14)
+        global rndDeathTime
+        rndDeathTime = self.randDthTime
+        for i in range(5):
+            gameStatus_Text.text = f"Starting in {5 - i} seconds!"
+            time.sleep(1)
+        gameStatus_Text.text = ""
+        mWaves = gamedata_Settings['game_max_waves']
+        for i in range(mWaves):
+            self.Wave()
+            if GameOver:
+                break
+            time.sleep(10)
+            enemies.enemy_objVars.clear()
+        print("GameMaster End!")
+    def Wave(self):
+        global enemiesSpawned
+        
+        enemies.spawn(None)
+        enemiesSpawned = True
+        if SBK_threadRunning is False:
+            try:
+                self.SBKillerThread.start()
+            except: pass
+        if enemiesSpawned is True and ETAI_threadRunnning is False:
+            try:    
+                print("Enemies are spawned")
+                self.enemiesAIThread.start()
+            except: pass
+        else:
+            logger.INFO("Jeśli to się pokazuje to znaczy ze gra działa :)")
+        return 1
+        
 
 class NewUpdate(threading.Thread):
     def run(self):
@@ -376,23 +402,49 @@ MC = EngineMC.MemoryCounter()
 
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
+    if enemiesSpawned and len(enemies.enemy_objVars) is 5:
+        for i in range(enemies.quantity):
+            try:
+                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0,0):
+                    global GameOver
+                    GameOver = True
+                    try:
+                        destroy(enemies.enemy_objVars[f'enemy{i}'])
+                    except:
+                        logger.WARN("Cannot destroy enemy that stands on Vec2(0, 0). It can be destroyed or there is error")
+                    break
+            except: pass
+
+def startGame():
+    logger.INFO("Player started game via UIPanel")
+    UIPanelEnableDisable()
+    gameStatus_Text.color = color.red
+    gameStatus_Text.text = ""
+    logger.DEBUG("GameMaster-Thread has been started")
+    gameMaster(name="GameMaster-Thread").start()
+
+UIPanel = WindowPanel(
+    enabled=False,
+    popup=True,
+    title="Menu",
+    content=[
+        Button(text="Start Game", on_click=startGame, color=color.rgb(50, 200, 100)),
+        Button(text='Exit Game', on_click=ButtonFuncs.Functions.AppExit, color=color.rgb(255, 100, 100))
+
+    ]
+)
 
 
+def UIPanelEnableDisable():
+    player.enabled = not player.enabled
+    UIPanel.enabled = not UIPanel.enabled
 
+UIPanel.bg.on_click = UIPanelEnableDisable
 
-end = time.time()
-logger.INFO(f"Loading done in {end - start}s")
-logger.COSMETIC("- - - - End of Loading LOG     ")
+logger.INFO(f"Loading done in {time.time() - start}s")
+logger.COSMETIC("- - - - End of Loading LOG    \n\n ")
 
-
-
-
-
-
-
-del start, end
+del start
 app.run()
 
 logger.FATAL("This shouldn't show up. If you can see this in logs you should check for gliches")
-
-

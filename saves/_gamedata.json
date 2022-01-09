@@ -8,6 +8,8 @@
 
     "game_max_score":9999,
     "game_enable_easter_eggs":"True",
+    "game_max_waves":3,
+    "_COMMENT_2":"Before next advancedEnemy",
 
     
     "player_speed":0,

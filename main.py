@@ -58,7 +58,7 @@ except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
 
 print("po import")
-window.forced_aspect_ratio = 16/10
+window.forced_aspect_ratio = 16/9
 camera.fov = 90
 
 
@@ -352,6 +352,9 @@ class SimpleBots_Killer(threading.Thread):
                                         time.sleep(.75)
                                 if mouse.hovered_entity.name != f'Enemy{i}':
                                     enemies.enemy_CanMove[f'enemy{i}'] = True
+                    if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0, 0):
+                        enemies.enemy_objVars[f'enemy{i}'] = None
+                        pass
                 time.sleep(.75)
         except:
             logger.ERROR("Exception Occured! in 99% of cases this is AttributeError. If it really is you don't need to worry!")

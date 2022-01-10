@@ -2,7 +2,9 @@
 #Copyright 2021-2022, Empezeeet, All Rights Reserved
 
 
-
+if __name__ == "__main__":
+    print("Wrong file")
+    exit()
 
 
 
@@ -131,7 +133,9 @@ class SimpleBots:
     def goCloser(self, isThread=False, **kwargs):
      if len(self.enemy_objVars) is 5:
         for i in range(self.quantity):
-            if self.enemy_CanMove[f'enemy{i}']  and len(self.enemy_objVars) >= 5:
+    
+            if self.enemy_CanMove[f'enemy{i}'] and len(self.enemy_objVars) >= 5:
+
                 #Both are positive
                 if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
                     self.enemy_objVars[f'enemy{i}'].position += (-1, 0, -1)

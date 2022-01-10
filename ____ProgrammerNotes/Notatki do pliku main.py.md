@@ -8,3 +8,21 @@
 ## POMYSŁY NA MECHANIKI:
 1. SimpleBots (Classic Enemy) nie mozna ich zabic natomiast mozna przetrzymywac dopóki nie znikną (czas zycia = 10 sekund)
 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Problemy:
+AI Nie włącza się
+

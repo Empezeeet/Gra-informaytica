@@ -51,7 +51,7 @@ class SimpleBots:
             "collider":'box',
             "texture":"textures/enemies/enemy2.png"
         }
-        self.update().start()
+        
         for i in range(self.quantity):
             self.enemies_health[f'enemy{i}'] = self.health
             
@@ -150,11 +150,7 @@ class SimpleBots:
                 if isThread == True:
                     time.sleep(round(random.uniform(0.1, 0.3), 1))
      else: 
-<<<<<<< HEAD
-        pass
-=======
          pass
->>>>>>> 0c1b605fc1081fb2f3ae5de7985737b0ed553996
 
 
 

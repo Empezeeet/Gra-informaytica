@@ -4,6 +4,7 @@
 
 if __name__ == "__main__":
     print("Wrong file")
+    raise RuntimeError("Run main.py not bots.py")
     exit()
 
 
@@ -21,15 +22,6 @@ try:
     #import giinger
 except ModuleNotFoundError as exception_err:
     raise ModuleNotFoundError(f"{exception_err}")
-
-
-
-
-
-
-
-
-
 
 #SimpleBots' bot life time = 10 seconds
 
@@ -57,18 +49,11 @@ class SimpleBots:
             "model":'models/test3.obj',
             "scale":self.scale,
             "collider":'box',
-            "texture":"textures/enemies/TWRDFN_Enemy.png"
+            "texture":"textures/enemies/enemy2.png"
         }
         self.update().start()
         for i in range(self.quantity):
             self.enemies_health[f'enemy{i}'] = self.health
-    class update(threading.Thread):
-        def run(self):
-            while SimpleBots.enemies_SpawnStatus:
-                for i in range(SimpleBots.quantity):
-                    if SimpleBots.lifeTimer - time.time() >= 10:
-                        destroy(SimpleBots.enemy_objVars[f'enemy{i}'])
-                time.sleep(.5)
             
             
     def spawn(self, *args):
@@ -88,6 +73,7 @@ class SimpleBots:
             if (zPos < 5) and (zPos > -5):
                 while (zPos < 5) and (zPos > -5):
                     zPos = random.randint(-24, 24)
+            
 
 
             self.enemy_objVars[f'enemy{i}'] = Entity(
@@ -162,7 +148,7 @@ class SimpleBots:
                 if isThread == True:
                     time.sleep(round(random.uniform(0.1, 0.3), 1))
      else: 
-        raise __exceptions.NoObject("Enemies are not spawned!")
+        pass
 
 
 

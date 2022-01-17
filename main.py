@@ -130,15 +130,18 @@ except NameError:
     logger.FATAL("Zmienna 'filename' nie została zdefiniowana, co onznacza że archwizowanie plików .log zostało zakończone błędem")     
     raise __exceptions.NoObject("Zmienna 'filename' nie została zdefiniowana. Sprawdź logi aby dowiedzieć się dlaczego.")
 
-
-logger.INFO(f"Time: {run_date}\n")
-logger.DEBUG("- - -  - - - - APP SETTINGS - - - - - - -")
-logger.DEBUG(f"App Window Text: {gamedata_Settings['app_window_text']}")
-logger.DEBUG(f"App Allow Log SysInfo: {gamedata_Settings['app_allow_log_sysInfo']}")
-logger.DEBUG(f"App Max Framerate: {gamedata_Settings['app_max_framerate']}")
-logger.DEBUG(f"App Fullscreen: {gamedata_Settings['app_fullscreen']}")
-logger.DEBUG("- - - - - - - APP SETTINGS - - - - - - -\n\n")
-del run_date, runID
+try:
+    #Logging App Settings
+        logger.INFO(f"Time: {run_date}\n")
+        logger.DEBUG("- - -  - - - - APP SETTINGS - - - - - - -")
+        logger.DEBUG(f"App Window Text: {gamedata_Settings['app_window_text']}")
+        logger.DEBUG(f"App Allow Log SysInfo: {gamedata_Settings['app_allow_log_sysInfo']}")
+        logger.DEBUG(f"App Max Framerate: {gamedata_Settings['app_max_framerate']}")
+        logger.DEBUG(f"App Fullscreen: {gamedata_Settings['app_fullscreen']}")
+        logger.DEBUG("- - - - - - - APP SETTINGS - - - - - - -\n\n")
+        del run_date, runID
+except:
+    pass
 
 
 
@@ -245,11 +248,6 @@ CreditsPanel =  WindowPanel(
         
 def showCredits():
     CreditsPanel.enabled = not CreditsPanel.enabled
-
-
-
-
-
 
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
@@ -433,7 +431,6 @@ UIPanel = WindowPanel(
     content=[
         Button(text="Start Game", on_click=startGame, color=color.rgb(50, 200, 100)),
         Button(text='Exit Game', on_click=ButtonFuncs.Functions.AppExit, color=color.rgb(255, 100, 100))
-
     ]
 )
 

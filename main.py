@@ -318,9 +318,14 @@ class enemiesTestingAI(threading.Thread):
             if time.time() - enemies.lifeTimer >= self.randomDeathTime:
                 print("Time reached end. Killing all SimpleBots!")
                 for i in range(enemies.quantity):
-                    enemies.enemy_objVars[f'enemy{i}'].collider = None
-                    enemies.enemy_objVars[f'enemy{i}'].scale = 0
-                    enemies.enemy_objVars[f'enemy{i}'].disable()
+                    try:
+                        enemies.enemy_objVars[f'enemy{i}'].collider = None
+                    
+                        enemies.enemy_objVars[f'enemy{i}'].scale = 0
+                        enemies.enemy_objVars[f'enemy{i}'].disable()
+                    except KeyError:
+                        logger.WARN("Enemy0 does not exists")
+                        pass
                 enemies.enemies_SpawnStatus = False
                 break
     def terminate(self):

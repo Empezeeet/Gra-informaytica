@@ -276,6 +276,8 @@ def input(key):
         if enemiesSpawned is True:
             print("Enemies are spawned")
             enemiesTestingAI().start()
+    if key == '.':
+        breakpoint()
         
     if key == '9':
         if SBK_threadRunning is not True:
@@ -359,26 +361,35 @@ class gameMaster(threading.Thread):
     ENAIThread = enemiesTestingAI(name="ENAI-Thread")
 
     def run(self):
+        print('runnedrun')
         global gameStatus_Text
         global randomDeathTime
+        global GameOver
         # Countdown Timer
         for i in range(5):
-            gameStatus_Text.txt = f"Starting in {i} seconds!"
-        
-        gameStatus_Text = ""
-        for i in range(gamedata_Settings['game_max_waves']):
+            gameStatus_Text.text = f"Start za {5-i} seconds!"
+            time.sleep(1)
+        gameStatus_Text.text = ""
+        waves_count = gamedata_Settings['game_max_waves']
+        for i in range(int(waves_count)):
             self.wave()
             if GameOver:
-                gameStatus_Text.text = "Game Over!"
+                gameStatus_Text.text = "Przegrałeś!"
+                logger.INFO("Game Over!")
+                print('Game Over!')
+                enemies.kill()
                 break
             time.sleep(10)
-            enemies.enemy_objVars.clear()
+            enemies.kill()
         print("Game has ended")
-        gameStatus_Text.text = "You Won!"
+
+
+
     def wave(self):
         global enemiesSpawned
         enemies.spawn()
         enemiesSpawned = True
+
         if SBK_threadRunning is False:
             try:
                 self.SBKThread.start()
@@ -407,12 +418,12 @@ def update():
                     global GameOver
                     GameOver = True
                     try:
-                        destroy(enemies.enemy_objVars[f'enemy{i}'])
+                        enemies.enemy_objVars[f'enemy{i}'].disable()
                     except:
                         logger.WARN("Cannot destroy enemy that stands on Vec2(0, 0). It can be destroyed or there is error")
                     break
             except: pass
-    i
+    
 
 def startGame():
     logger.INFO("Player started game via UIPanel")

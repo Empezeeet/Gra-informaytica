@@ -111,11 +111,14 @@ class SimpleBots:
                 self.enemies_directions[f'enemy{i}_x'] = None
             if self.enemy_objVars[f'enemy{i}'].position.x == 0:
                 self.enemies_directions[f'enemy{i}_z'] = None
-            
+        
+    def kill(self, **kwargs):
+        if len(self.enemy_objVars) == self.quantity:
+            for i in range(self.quantity):
+                self.enemy_objVars[f'enemy{i}'].disable()
+        
 
-        #     print(f"X: {self.enemies_directions[f'enemy{i}_x']}, Z: {self.enemies_directions[f'enemy{i}_z']}")
-        #     print("- - - - POS - - - -\n")
-        # print(self.enemies_directions)
+
     def goCloser(self, isThread=False, **kwargs):
      if len(self.enemy_objVars) is 5:
         for i in range(self.quantity):

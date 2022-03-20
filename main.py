@@ -328,7 +328,7 @@ class enemiesTestingAI(threading.Thread):
                         pass
                 enemies.enemies_SpawnStatus = False
                 break
-
+# helo
 class SimpleBotsKiller(threading.Thread):
     def run(self):
         global SBK_threadRunning

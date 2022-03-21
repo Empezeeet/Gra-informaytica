@@ -11,7 +11,7 @@
 
 
 
-from this import d
+
 import time
 import json
 
@@ -332,24 +332,12 @@ class enemiesTestingAI(threading.Thread):
 class SimpleBotsKiller(threading.Thread):
     def run(self):
         global SBK_threadRunning
+        global GameOver
         SBK_threadRunning = True
-        try:
-            if enemies.enemies_SpawnStatus is True:
-                if mouse.hovered_entity is not None:
-                    for i in range(enemies.quantity):
-                        if mouse.hovered_entity.name is f"Enemy{i}":
-                            while mouse.hovered_entity.name == f"Enemy{i}":
-                                enemies.enemy_CanMove[f'enemy{i}'] = False
-                                print("SBK - Enemy's canMove Parameter set to False!")
-                                time.sleep(.75)
-                            if mouse.hovered_entity.name != f'Enemy{i}':
-                                enemies.enemy_CanMove[f'enemy{i}'] = True
-                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0, 0):
-                    enemies.enemy_objVars[f'enemy{i}'] = None
-                    time.sleep(.75)
-
-        except:
-            logger.ERROR("Exception Occured! in 99% of cases this is AttributeError. If it really is you don't need to worry!")
+        while True:
+            print(mouse.hovered_entity)
+            
+            time.sleep(0.5)
     def terminate(self):
         self._running = False
 
@@ -365,14 +353,14 @@ class gameMaster(threading.Thread):
         for i in range(5):
             gameStatus_Text.txt = f"Starting in {i} seconds!"
         
-        gameStatus_Text = ""
+        gameStatus_Text.text = ""
         for i in range(gamedata_Settings['game_max_waves']):
             self.wave()
             if GameOver:
                 gameStatus_Text.text = "Game Over!"
                 break
             time.sleep(10)
-            enemies.enemy_objVars.clear()
+            
         print("Game has ended")
         gameStatus_Text.text = "You Won!"
     def wave(self):
@@ -407,12 +395,12 @@ def update():
                     global GameOver
                     GameOver = True
                     try:
-                        destroy(enemies.enemy_objVars[f'enemy{i}'])
+                        enemies.enemy_objVars[f'enemy{i}'].kill()
                     except:
                         logger.WARN("Cannot destroy enemy that stands on Vec2(0, 0). It can be destroyed or there is error")
                     break
             except: pass
-    i
+    #helo l
 
 def startGame():
     logger.INFO("Player started game via UIPanel")

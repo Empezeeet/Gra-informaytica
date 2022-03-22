@@ -88,7 +88,10 @@ class SimpleBots:
             time.sleep(.01)
 
 
-
+    def kill(self):
+        if self.quantity == self.enemy_objVars:
+            for i in range(self.quantity):
+                self.enemy_objVars[f'enemy{i}'].disable()
 
 
     def getDirection(self):
@@ -120,7 +123,7 @@ class SimpleBots:
      if len(self.enemy_objVars) is 5:
         for i in range(self.quantity):
     
-            if self.enemy_CanMove[f'enemy{i}'] and len(self.enemy_objVars) >= 5:
+            if self.enemy_CanMove[f'enemy{i}'] and self.enemies_SpawnStatus:
 
                 #Both are positive
                 if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):

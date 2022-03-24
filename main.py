@@ -15,6 +15,9 @@
 import time
 import json
 
+from numpy import true_divide
+from pygame import K_f
+
 
 
 
@@ -155,7 +158,7 @@ logger.DEBUG(f"Time from start to end of loading essentials: {time.time()-start}
 logger.INFO("Created window")
 
 #*----World:
-ground = Entity(model='cube', collider='mesh', scale=(50, 1, 50), color = color.rgb(98, 125, 47))
+ground = Entity(name="GroundEntity-XDAP", model='cube', collider='mesh', scale=(50, 1, 50), color = color.rgb(98, 125, 47))
 Sky = Sky()
 logger.DEBUG("Sky and ground has been created.")
 #*----World
@@ -328,16 +331,23 @@ class enemiesTestingAI(threading.Thread):
                         pass
                 enemies.enemies_SpawnStatus = False
                 break
-# yes updated code
+
 class SimpleBotsKiller(threading.Thread):
     def run(self):
         global SBK_threadRunning
         global GameOver
         SBK_threadRunning = True
+        # Działa Nie Dotykać pod żadnym pozorem
+        #                           - Empezeeet
+        # v2 po czyszczeniu
         while True:
-            print(mouse.hovered_entity)
-            
-            time.sleep(0.5)
+            if (enemies.enemies_SpawnStatus == True) and (mouse.hovered_entity is not None):
+                for i in range(enemies.quantity):
+                    if mouse.hovered_entity.name == f"Enemy{i}":
+                        enemies.enemy_CanMove[f'enemy{i}'] = False
+                    else:
+                        enemies.enemy_CanMove[f'enemy{i}'] = True
+            time.sleep(0.01)
     def terminate(self):
         self._running = False
 
@@ -351,18 +361,20 @@ class gameMaster(threading.Thread):
         global randomDeathTime
         # Countdown Timer
         for i in range(5):
-            gameStatus_Text.txt = f"Starting in {i} seconds!"
-        
+            gameStatus_Text.text = f"Starting in {5-i} seconds!"
+            time.sleep(1)
         gameStatus_Text.text = ""
         for i in range(gamedata_Settings['game_max_waves']):
+            breakpoint()
             self.wave()
             if GameOver:
                 gameStatus_Text.text = "Game Over!"
                 break
             time.sleep(10)
             
-        print("Game has ended")
-        gameStatus_Text.text = "You Won!"
+        if GameOver is True:
+            gameStatus_Text.text = "Game Over!"
+            
     def wave(self):
         global enemiesSpawned
         enemies.spawn()
@@ -388,6 +400,8 @@ MC = EngineMC.MemoryCounter()
 
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
+    # TODO: #3 Trzeba to wyczyści√ bo to jakiś syf lol @Empezeeet
+
     if enemiesSpawned and len(enemies.enemy_objVars) is 5:
         for i in range(enemies.quantity):
             try:
@@ -400,7 +414,6 @@ def update():
                         logger.WARN("Cannot destroy enemy that stands on Vec2(0, 0). It can be destroyed or there is error")
                     break
             except: pass
-    #helo l
 
 def startGame():
     logger.INFO("Player started game via UIPanel")

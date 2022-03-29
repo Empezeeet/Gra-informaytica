@@ -15,8 +15,8 @@
 import time
 import json
 
-from numpy import true_divide
-from pygame import K_f
+
+
 
 
 
@@ -217,10 +217,6 @@ enemies = __bots.SimpleBots(health=10, speed=1, howmuch=5)
 enemiesSpawned = False
 
 #*----Enemies' Settings
-
-#*----Advanced Enemy's Settings
-advancedEnemy = __bots.AdvancedBot()
-#*----Advanced Enemy's Settings
 memoryUsage_Text.disable()
 coordinates_Text.disable()
 logger.INFO("DebugMode UI Labels has been Disabled")
@@ -233,63 +229,17 @@ GameScore = 0
 
 canMoveCamera = False
 
-#gameStatus_Text.text = "Press R to start game"
-
-CreditsPanel =  WindowPanel(
-                enabled=False,
-                title='Credits',
-                
-                content=[
-                    Text(text="Programmer: Empezeeet"),
-                    Text(text="2nd Programmer: Kubix"),
-                    Text(text="Models: Empezeeet & Kubix"),
-                    Text(text='')
-                ]
-            )
-
-        
-def showCredits():
-    CreditsPanel.enabled = not CreditsPanel.enabled
-
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
 def input(key):
     logger.DEBUG(f"User pressed key: {key}")
     if key == "escape":
         UIPanelEnableDisable()
-    if key == "i":
-        pass
-    if key == 'r':
-        startGame()
-    if key == 'q':
-        global enemiesSpawned
-        enemiesSpawned = True
-        enemies.spawn(None)
-    if key == 'b':
-        player.position = (0, 50.05, 0)
-    if key == 'f':
-        player.speed += 2
-    if key == 'g':
-        player.speed -= 2
-    if key == 'x':
+    if key == 'l':
         logger.INFO("Exited app as application.quit())")
         application.quit()
-    if key == 'e':
-        print("Input E - player pressed E")
-        if enemiesSpawned is True:
-            print("Enemies are spawned")
-            enemiesTestingAI().start()
-        
-    if key == '9':
-        if SBK_threadRunning is not True:
-            #SimpleBots_Killer(name="SBKiller-Thread").start()
-            pass
     if key == '[':
         breakpoint()
-    if key == "o":
-        Sky.color = color.white
-    if key == "p":
-        Sky.color = color.black
     if key == "f3":
         collidersStatus = False
         #Show Debug Info
@@ -305,12 +255,13 @@ ETAI_threadRunnning = False
 #Thread Classes
 
 
-
+randomDeathTime = random.randint(10, 20)
 
 class enemiesTestingAI(threading.Thread):
     def run(self):
         global ETAI_threadRunnning
         global gameStatus_Text
+        global enemiesSpawned
         ETAI_threadRunnning = True
         try:
             global randomDeathTime
@@ -318,19 +269,18 @@ class enemiesTestingAI(threading.Thread):
         except:
             self.randomDeathTime = 10
         while enemies.enemies_SpawnStatus:
+            # TODO: #4 Naprawić to bo nie działa @Empezeeet
             enemies.goCloser(True)
-            if time.time() - enemies.lifeTimer >= randomDeathTime:
-                print("Time reached end. Killing all SimpleBots!")
-                for i in range(enemies.quantity):
-                    try:
-                        enemies.enemy_objVars[f'enemy{i}'].collider = None
-                        enemies.enemy_objVars[f'enemy{i}'].scale = 0
-                        enemies.enemy_objVars[f'enemy{i}'].disable()
-                    except KeyError:
-                        logger.WARN("Enemy0 does not exists")
-                        pass
+            if (time.time() - enemies.lifeTimer) >= randomDeathTime:
+                logger.DEBUG("Killing Enemies")
+                enemiesSpawned = False
                 enemies.enemies_SpawnStatus = False
-                break
+                enemies.kill()
+            
+    def terminate(self):
+        self._running = False
+
+
 
 class SimpleBotsKiller(threading.Thread):
     def run(self):
@@ -352,6 +302,7 @@ class SimpleBotsKiller(threading.Thread):
         self._running = False
 
 
+
 class gameMaster(threading.Thread):
     SBKThread = SimpleBotsKiller(name="SBK-Thread")
     ENAIThread = enemiesTestingAI(name="ENAI-Thread")
@@ -359,26 +310,42 @@ class gameMaster(threading.Thread):
     def run(self):
         global gameStatus_Text
         global randomDeathTime
+        global enemiesSpawned
+        gameWon = False
         # Countdown Timer
         for i in range(5):
             gameStatus_Text.text = f"Starting in {5-i} seconds!"
             time.sleep(1)
+
         gameStatus_Text.text = ""
         for i in range(gamedata_Settings['game_max_waves']):
-            breakpoint()
             self.wave()
             if GameOver:
-                gameStatus_Text.text = "Game Over!"
+                gameOver_func()
                 break
-            time.sleep(10)
-            
+            time.sleep(randomDeathTime)
+            enemies.kill()
+            enemiesSpawned = False
+            enemies.enemies_SpawnStatus = False
+            if i == gamedata_Settings['game_max_waves']:
+                gameWon = True
+            time.sleep(.2)
         if GameOver is True:
-            gameStatus_Text.text = "Game Over!"
+            gameOver_func()
+        elif gameWon:
+            self.SBKThread.terminate()
+            self.ENAIThread.terminate()
+            gameWon_func()
+
             
+
+
     def wave(self):
         global enemiesSpawned
-        enemies.spawn()
-        enemiesSpawned = True
+        if enemies.enemies_SpawnStatus == False:
+                enemies.spawn()
+                enemiesSpawned = True
+                enemies.enemies_SpawnStatus = True
         if SBK_threadRunning is False:
             try:
                 self.SBKThread.start()
@@ -391,6 +358,9 @@ class gameMaster(threading.Thread):
             except:
                 logger.FATAL("Cannot Run ETAIThread!")
                 breakpoint()
+    
+       
+    
         
 
             
@@ -398,22 +368,38 @@ class gameMaster(threading.Thread):
 
 MC = EngineMC.MemoryCounter()
 
+
+def gameWon_func():
+    gameStatus_Text.text = "You Won!"
+    enemies.kill()
+    enemiesSpawned = False
+    enemies.enemies_SpawnStatus = False
+    
+
+
+def gameOver_func():
+    global enemiesSpawned
+    gameStatus_Text.text = 'Game Over'
+    enemies.kill()
+    enemiesSpawned = False
+    enemies.enemies_SpawnStatus = False
+
+
+
+
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
-    # TODO: #3 Trzeba to wyczyści√ bo to jakiś syf lol @Empezeeet
-
-    if enemiesSpawned and len(enemies.enemy_objVars) is 5:
-        for i in range(enemies.quantity):
-            try:
-                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0,0):
-                    global GameOver
+    global GameOver
+    global enemiesSpawned
+    if enemiesSpawned:
+        if len(enemies.enemy_objVars) is enemies.quantity:
+            for i in range(enemies.quantity):
+                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0, 0):
+                    enemies.enemy_objVars[f'enemy{i}'].scale = 0
                     GameOver = True
-                    try:
-                        enemies.enemy_objVars[f'enemy{i}'].kill()
-                    except:
-                        logger.WARN("Cannot destroy enemy that stands on Vec2(0, 0). It can be destroyed or there is error")
                     break
-            except: pass
+            if GameOver:
+                gameOver_func()
 
 def startGame():
     logger.INFO("Player started game via UIPanel")
@@ -423,15 +409,20 @@ def startGame():
     logger.DEBUG("GameMaster-Thread has been started")
     gameMaster(name="GameMaster-Thread").start()
 
+def userExit():
+    logger.INFO("User exited the game")
+    application.quit()
+
 UIPanel = WindowPanel(
     enabled=False,
     popup=True,
     title="Menu",
     content=[
         Button(text="Start Game", on_click=startGame, color=color.rgb(50, 200, 100)),
-        Button(text='Exit Game', on_click=app.userExit, color=color.rgb(255, 100, 100))
+        Button(text='Exit Game', on_click=userExit, color=color.rgb(255, 100, 100))
     ]
 )
+
 
 
 def UIPanelEnableDisable():

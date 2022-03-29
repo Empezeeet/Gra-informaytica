@@ -89,9 +89,10 @@ class SimpleBots:
 
 
     def kill(self):
-        if self.quantity == self.enemy_objVars:
+        if (self.quantity == len(self.enemy_objVars)) and self.enemies_SpawnStatus:
             for i in range(self.quantity):
-                self.enemy_objVars[f'enemy{i}'].disable()
+                self.enemy_objVars[f'enemy{i}'].scale = 0.001
+                    
 
 
     def getDirection(self):
@@ -151,7 +152,7 @@ class SimpleBots:
                     self.enemy_objVars[f'enemy{i}'].position += (1, 0, 0)
                 #If its called from thread, moves of bots can move not together
                 if isThread == True:
-                    time.sleep(round(random.uniform(0.1, 0.3), 1))
+                    time.sleep(round(random.uniform(0.1, 0.4), 2))
      else: 
          pass
 

@@ -7,6 +7,7 @@
 #NOTE 2: NEVER put these keys in IF in input(key) function:
 #NOTE 2.1: ['meta', 'meta up', 'control', 'control up', 'alt', 'alt up']
 #NOTE 3: SimpleBots should be used as ClassicEnemy while AdvancedBots should be as Bosses
+# TODO: After randomDeathTime is over, new spawned enemies are not moving (#)
 #*----PROGRAMMER NOTES
 
 
@@ -238,21 +239,6 @@ def input(key):
     if key == 'l':
         logger.INFO("Exited app as application.quit())")
         application.quit()
-<<<<<<< HEAD
-    if key == 'e':
-        print("Input E - player pressed E")
-        if enemiesSpawned is True:
-            print("Enemies are spawned")
-            enemiesTestingAI().start()
-    if key == '.':
-        breakpoint()
-        
-    if key == '9':
-        if SBK_threadRunning is not True:
-            #SimpleBots_Killer(name="SBKiller-Thread").start()
-            pass
-=======
->>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
     if key == '[':
         breakpoint()
     if key == "f3":
@@ -282,9 +268,10 @@ class enemiesTestingAI(threading.Thread):
             global randomDeathTime
             randomDeathTime = random.randint(10, 20)
         except:
-            self.randomDeathTime = 10
+            randomDeathTime = 10
         while enemies.enemies_SpawnStatus:
-            # TODO: #4 Naprawić to bo nie działa @Empezeeet
+
+            randomDeathTime = 5
             enemies.goCloser(True)
             if (time.time() - enemies.lifeTimer) >= randomDeathTime:
                 logger.DEBUG("Killing Enemies")
@@ -323,30 +310,8 @@ class gameMaster(threading.Thread):
     ENAIThread = enemiesTestingAI(name="ENAI-Thread")
 
     def run(self):
-        print('runnedrun')
         global gameStatus_Text
         global randomDeathTime
-<<<<<<< HEAD
-        global GameOver
-        # Countdown Timer
-        for i in range(5):
-            gameStatus_Text.text = f"Start za {5-i} seconds!"
-            time.sleep(1)
-        gameStatus_Text.text = ""
-        waves_count = gamedata_Settings['game_max_waves']
-        for i in range(int(waves_count)):
-            self.wave()
-            if GameOver:
-                gameStatus_Text.text = "Przegrałeś!"
-                logger.INFO("Game Over!")
-                print('Game Over!')
-                enemies.kill()
-                break
-            time.sleep(10)
-            enemies.kill()
-        print("Game has ended")
-
-=======
         global enemiesSpawned
         gameWon = False
         # Countdown Timer
@@ -375,21 +340,14 @@ class gameMaster(threading.Thread):
             gameWon_func()
 
             
->>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
 
 
     def wave(self):
         global enemiesSpawned
-<<<<<<< HEAD
-        enemies.spawn()
-        enemiesSpawned = True
-
-=======
         if enemies.enemies_SpawnStatus == False:
                 enemies.spawn()
                 enemiesSpawned = True
                 enemies.enemies_SpawnStatus = True
->>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
         if SBK_threadRunning is False:
             try:
                 self.SBKThread.start()
@@ -441,19 +399,9 @@ def update():
                 if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0, 0):
                     enemies.enemy_objVars[f'enemy{i}'].scale = 0
                     GameOver = True
-<<<<<<< HEAD
-                    try:
-                        enemies.enemy_objVars[f'enemy{i}'].disable()
-                    except:
-                        logger.WARN("Cannot destroy enemy that stands on Vec2(0, 0). It can be destroyed or there is error")
-                    break
-            except: pass
-    
-=======
                     break
             if GameOver:
                 gameOver_func()
->>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
 
 def startGame():
     logger.INFO("Player started game via UIPanel")

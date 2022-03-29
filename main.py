@@ -11,9 +11,12 @@
 
 
 
-from this import d
+
 import time
 import json
+
+
+
 
 
 
@@ -155,7 +158,7 @@ logger.DEBUG(f"Time from start to end of loading essentials: {time.time()-start}
 logger.INFO("Created window")
 
 #*----World:
-ground = Entity(model='cube', collider='mesh', scale=(50, 1, 50), color = color.rgb(98, 125, 47))
+ground = Entity(name="GroundEntity-XDAP", model='cube', collider='mesh', scale=(50, 1, 50), color = color.rgb(98, 125, 47))
 Sky = Sky()
 logger.DEBUG("Sky and ground has been created.")
 #*----World
@@ -214,10 +217,6 @@ enemies = __bots.SimpleBots(health=10, speed=1, howmuch=5)
 enemiesSpawned = False
 
 #*----Enemies' Settings
-
-#*----Advanced Enemy's Settings
-advancedEnemy = __bots.AdvancedBot()
-#*----Advanced Enemy's Settings
 memoryUsage_Text.disable()
 coordinates_Text.disable()
 logger.INFO("DebugMode UI Labels has been Disabled")
@@ -230,47 +229,16 @@ GameScore = 0
 
 canMoveCamera = False
 
-#gameStatus_Text.text = "Press R to start game"
-
-CreditsPanel =  WindowPanel(
-                enabled=False,
-                title='Credits',
-                
-                content=[
-                    Text(text="Programmer: Empezeeet"),
-                    Text(text="2nd Programmer: Kubix"),
-                    Text(text="Models: Empezeeet & Kubix"),
-                    Text(text='')
-                ]
-            )
-
-        
-def showCredits():
-    CreditsPanel.enabled = not CreditsPanel.enabled
-
 
 logger.DEBUG("AdvancedEnemy Entity has been assigned")
 def input(key):
     logger.DEBUG(f"User pressed key: {key}")
     if key == "escape":
         UIPanelEnableDisable()
-    if key == "i":
-        pass
-    if key == 'r':
-        startGame()
-    if key == 'q':
-        global enemiesSpawned
-        enemiesSpawned = True
-        enemies.spawn(None)
-    if key == 'b':
-        player.position = (0, 50.05, 0)
-    if key == 'f':
-        player.speed += 2
-    if key == 'g':
-        player.speed -= 2
-    if key == 'x':
+    if key == 'l':
         logger.INFO("Exited app as application.quit())")
         application.quit()
+<<<<<<< HEAD
     if key == 'e':
         print("Input E - player pressed E")
         if enemiesSpawned is True:
@@ -283,12 +251,10 @@ def input(key):
         if SBK_threadRunning is not True:
             #SimpleBots_Killer(name="SBKiller-Thread").start()
             pass
+=======
+>>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
     if key == '[':
         breakpoint()
-    if key == "o":
-        Sky.color = color.white
-    if key == "p":
-        Sky.color = color.black
     if key == "f3":
         collidersStatus = False
         #Show Debug Info
@@ -304,12 +270,13 @@ ETAI_threadRunnning = False
 #Thread Classes
 
 
-
+randomDeathTime = random.randint(10, 20)
 
 class enemiesTestingAI(threading.Thread):
     def run(self):
         global ETAI_threadRunnning
         global gameStatus_Text
+        global enemiesSpawned
         ETAI_threadRunnning = True
         try:
             global randomDeathTime
@@ -317,43 +284,38 @@ class enemiesTestingAI(threading.Thread):
         except:
             self.randomDeathTime = 10
         while enemies.enemies_SpawnStatus:
+            # TODO: #4 Naprawić to bo nie działa @Empezeeet
             enemies.goCloser(True)
-            if time.time() - enemies.lifeTimer >= randomDeathTime:
-                print("Time reached end. Killing all SimpleBots!")
-                for i in range(enemies.quantity):
-                    try:
-                        enemies.enemy_objVars[f'enemy{i}'].collider = None
-                        enemies.enemy_objVars[f'enemy{i}'].scale = 0
-                        enemies.enemy_objVars[f'enemy{i}'].disable()
-                    except KeyError:
-                        logger.WARN("Enemy0 does not exists")
-                        pass
+            if (time.time() - enemies.lifeTimer) >= randomDeathTime:
+                logger.DEBUG("Killing Enemies")
+                enemiesSpawned = False
                 enemies.enemies_SpawnStatus = False
-                break
+                enemies.kill()
+            
+    def terminate(self):
+        self._running = False
+
+
 
 class SimpleBotsKiller(threading.Thread):
     def run(self):
         global SBK_threadRunning
+        global GameOver
         SBK_threadRunning = True
-        try:
-            if enemies.enemies_SpawnStatus is True:
-                if mouse.hovered_entity is not None:
-                    for i in range(enemies.quantity):
-                        if mouse.hovered_entity.name is f"Enemy{i}":
-                            while mouse.hovered_entity.name == f"Enemy{i}":
-                                enemies.enemy_CanMove[f'enemy{i}'] = False
-                                print("SBK - Enemy's canMove Parameter set to False!")
-                                time.sleep(.75)
-                            if mouse.hovered_entity.name != f'Enemy{i}':
-                                enemies.enemy_CanMove[f'enemy{i}'] = True
-                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0, 0):
-                    enemies.enemy_objVars[f'enemy{i}'] = None
-                    time.sleep(.75)
-
-        except:
-            logger.ERROR("Exception Occured! in 99% of cases this is AttributeError. If it really is you don't need to worry!")
+        # Działa Nie Dotykać pod żadnym pozorem
+        #                           - Empezeeet
+        # v2 po czyszczeniu
+        while True:
+            if (enemies.enemies_SpawnStatus == True) and (mouse.hovered_entity is not None):
+                for i in range(enemies.quantity):
+                    if mouse.hovered_entity.name == f"Enemy{i}":
+                        enemies.enemy_CanMove[f'enemy{i}'] = False
+                    else:
+                        enemies.enemy_CanMove[f'enemy{i}'] = True
+            time.sleep(0.01)
     def terminate(self):
         self._running = False
+
 
 
 class gameMaster(threading.Thread):
@@ -364,6 +326,7 @@ class gameMaster(threading.Thread):
         print('runnedrun')
         global gameStatus_Text
         global randomDeathTime
+<<<<<<< HEAD
         global GameOver
         # Countdown Timer
         for i in range(5):
@@ -383,13 +346,50 @@ class gameMaster(threading.Thread):
             enemies.kill()
         print("Game has ended")
 
+=======
+        global enemiesSpawned
+        gameWon = False
+        # Countdown Timer
+        for i in range(5):
+            gameStatus_Text.text = f"Starting in {5-i} seconds!"
+            time.sleep(1)
+
+        gameStatus_Text.text = ""
+        for i in range(gamedata_Settings['game_max_waves']):
+            self.wave()
+            if GameOver:
+                gameOver_func()
+                break
+            time.sleep(randomDeathTime)
+            enemies.kill()
+            enemiesSpawned = False
+            enemies.enemies_SpawnStatus = False
+            if i == gamedata_Settings['game_max_waves']:
+                gameWon = True
+            time.sleep(.2)
+        if GameOver is True:
+            gameOver_func()
+        elif gameWon:
+            self.SBKThread.terminate()
+            self.ENAIThread.terminate()
+            gameWon_func()
+
+            
+>>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
 
 
     def wave(self):
         global enemiesSpawned
+<<<<<<< HEAD
         enemies.spawn()
         enemiesSpawned = True
 
+=======
+        if enemies.enemies_SpawnStatus == False:
+                enemies.spawn()
+                enemiesSpawned = True
+                enemies.enemies_SpawnStatus = True
+>>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
         if SBK_threadRunning is False:
             try:
                 self.SBKThread.start()
@@ -402,6 +402,9 @@ class gameMaster(threading.Thread):
             except:
                 logger.FATAL("Cannot Run ETAIThread!")
                 breakpoint()
+    
+       
+    
         
 
             
@@ -409,14 +412,36 @@ class gameMaster(threading.Thread):
 
 MC = EngineMC.MemoryCounter()
 
+
+def gameWon_func():
+    gameStatus_Text.text = "You Won!"
+    enemies.kill()
+    enemiesSpawned = False
+    enemies.enemies_SpawnStatus = False
+    
+
+
+def gameOver_func():
+    global enemiesSpawned
+    gameStatus_Text.text = 'Game Over'
+    enemies.kill()
+    enemiesSpawned = False
+    enemies.enemies_SpawnStatus = False
+
+
+
+
 def update():
     coordinates_Text.text = f"X{round(player.position.x, 2)} Y{round(player.position.y, 2)} Z{round(player.position.z, 2)}"
-    if enemiesSpawned and len(enemies.enemy_objVars) is 5:
-        for i in range(enemies.quantity):
-            try:
-                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0,0):
-                    global GameOver
+    global GameOver
+    global enemiesSpawned
+    if enemiesSpawned:
+        if len(enemies.enemy_objVars) is enemies.quantity:
+            for i in range(enemies.quantity):
+                if enemies.enemy_objVars[f'enemy{i}'].position.xz == (0, 0):
+                    enemies.enemy_objVars[f'enemy{i}'].scale = 0
                     GameOver = True
+<<<<<<< HEAD
                     try:
                         enemies.enemy_objVars[f'enemy{i}'].disable()
                     except:
@@ -424,6 +449,11 @@ def update():
                     break
             except: pass
     
+=======
+                    break
+            if GameOver:
+                gameOver_func()
+>>>>>>> d460c39a13b5958c2207c026af12ad2c72977a15
 
 def startGame():
     logger.INFO("Player started game via UIPanel")
@@ -433,15 +463,20 @@ def startGame():
     logger.DEBUG("GameMaster-Thread has been started")
     gameMaster(name="GameMaster-Thread").start()
 
+def userExit():
+    logger.INFO("User exited the game")
+    application.quit()
+
 UIPanel = WindowPanel(
     enabled=False,
     popup=True,
     title="Menu",
     content=[
         Button(text="Start Game", on_click=startGame, color=color.rgb(50, 200, 100)),
-        Button(text='Exit Game', on_click=app.userExit, color=color.rgb(255, 100, 100))
+        Button(text='Exit Game', on_click=userExit, color=color.rgb(255, 100, 100))
     ]
 )
+
 
 
 def UIPanelEnableDisable():

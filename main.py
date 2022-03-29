@@ -256,22 +256,21 @@ ETAI_threadRunnning = False
 #Thread Classes
 
 
-randomDeathTime = random.randint(10, 20)
+randomDeathTime = random.randint(5, 15)
 
 class enemiesTestingAI(threading.Thread):
     def run(self):
         global ETAI_threadRunnning
         global gameStatus_Text
         global enemiesSpawned
+        global randomDeathTime
         ETAI_threadRunnning = True
         try:
-            global randomDeathTime
-            randomDeathTime = random.randint(10, 20)
+            randomDeathTime = random.randint(5, 15)
+            print("RandomDeathTime: ", randomDeathTime)
         except:
             randomDeathTime = 10
         while enemies.enemies_SpawnStatus:
-
-        
             enemies.goCloser(True)
             if (time.time() - enemies.lifeTimer) >= randomDeathTime:
                 logger.DEBUG("Killing Enemies")

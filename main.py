@@ -7,6 +7,7 @@
 #NOTE 2: NEVER put these keys in IF in input(key) function:
 #NOTE 2.1: ['meta', 'meta up', 'control', 'control up', 'alt', 'alt up']
 #NOTE 3: SimpleBots should be used as ClassicEnemy while AdvancedBots should be as Bosses
+# TODO: After randomDeathTime is over, new spawned enemies are not moving (#7)
 #*----PROGRAMMER NOTES
 
 
@@ -267,9 +268,10 @@ class enemiesTestingAI(threading.Thread):
             global randomDeathTime
             randomDeathTime = random.randint(10, 20)
         except:
-            self.randomDeathTime = 10
+            randomDeathTime = 10
         while enemies.enemies_SpawnStatus:
-            # TODO: #4 Naprawić to bo nie działa @Empezeeet
+
+        
             enemies.goCloser(True)
             if (time.time() - enemies.lifeTimer) >= randomDeathTime:
                 logger.DEBUG("Killing Enemies")

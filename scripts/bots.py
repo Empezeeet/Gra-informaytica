@@ -32,7 +32,6 @@ class SimpleBots:
     enemies_directions = { }
     enemies_health = { }
     enemies_spawnCoords = { }
-    enemy_CanMove = { }
     enemies_SpawnStatus = False #True - Spawned, False - Not Spawned
     lifeTimer = None
 
@@ -44,6 +43,7 @@ class SimpleBots:
         self.quantity = kwargs.get('howmuch')
         self.model = 'cube'
         self.color = color.rgb(255, 50, 50)
+        self.enemy_CanMove = { }
         self.scale = 2.5
         self.enemy_spawnAttributes = {
             "model":'models/test3.obj',
@@ -79,7 +79,7 @@ class SimpleBots:
             self.enemy_objVars[f'enemy{i}'] = Entity(
                 **self.enemy_spawnAttributes, 
                 position=(xPos, 2, zPos),
-                color=color.rgb(255, 90, 90),
+                #color=color.rgb(255, 90, 90),
                 name=f"Enemy{i}"
             )
 
@@ -88,7 +88,11 @@ class SimpleBots:
             time.sleep(.01)
 
 
-
+    def kill(self):
+        if (self.quantity == len(self.enemy_objVars)) and self.enemies_SpawnStatus:
+            for i in range(self.quantity):
+                self.enemy_objVars[f'enemy{i}'].scale = 0.001
+                    
 
 
     def getDirection(self):
@@ -120,7 +124,7 @@ class SimpleBots:
      if len(self.enemy_objVars) is 5:
         for i in range(self.quantity):
     
-            if self.enemy_CanMove[f'enemy{i}'] and len(self.enemy_objVars) >= 5:
+            if (self.enemy_CanMove[f'enemy{i}'] == True) and (self.enemies_SpawnStatus == True):
 
                 #Both are positive
                 if (self.enemy_objVars[f'enemy{i}'].position.x > 0) and (self.enemy_objVars[f'enemy{i}'].position.z > 0):
@@ -148,7 +152,7 @@ class SimpleBots:
                     self.enemy_objVars[f'enemy{i}'].position += (1, 0, 0)
                 #If its called from thread, moves of bots can move not together
                 if isThread == True:
-                    time.sleep(round(random.uniform(0.1, 0.3), 1))
+                    time.sleep(round(random.uniform(0.1, 0.4), 2))
      else: 
          pass
 

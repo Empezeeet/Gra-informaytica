@@ -208,7 +208,7 @@ logger.INFO("Window parameters has been updated.")
 enemy_testor = Entity(
     model='sphere',
     color=color.rgb(10, 255, 100),
-    scale=(2.5, 2.5, 2.5)
+    scale=1
 )
 enemy_testor.position = (10, 20, 10)
 logger.DEBUG("Enemy tester entity has been created")
@@ -250,6 +250,8 @@ def input(key):
             collidersStatus = not collidersStatus
         memoryUsage_Text.enabled = not memoryUsage_Text.enabled
         coordinates_Text.enabled = not coordinates_Text.enabled
+    if key == "j":
+        player.speed = 5
 
 SBK_threadRunning = False
 ETAI_threadRunnning = False

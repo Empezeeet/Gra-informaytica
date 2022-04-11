@@ -11,6 +11,7 @@ if __name__ == "__main__":
 
 try:
     from ursina import *
+    from ursina.shaders import lit_with_shadows_shader 
     import math
     import random
     import time
@@ -44,12 +45,13 @@ class SimpleBots:
         self.model = 'cube'
         self.color = color.rgb(255, 50, 50)
         self.enemy_CanMove = { }
-        self.scale = 2.5
+        self.scale = 1.5
         self.enemy_spawnAttributes = {
-            "model":'models/test3.obj',
+            "model":'models/enemy.obj',
             "scale":self.scale,
             "collider":'box',
-            "texture":"textures/enemies/enemy2.png"
+            "texture":"textures/enemies/enemy3.png",
+            "shader":lit_with_shadows_shader
         }
         
         for i in range(self.quantity):

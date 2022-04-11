@@ -146,8 +146,6 @@ cython_debug/
 
 
 
-# Own
-**/saves/_logdata.olVar
 
 # PyCharm
 #  JetBrains specific template is maintainted in a separate JetBrains.gitignore that can

@@ -45,11 +45,12 @@ try:
         import scripts.bots as __bots
         import scripts.exceptions as __exceptions
     #UrsinaEngine Packages
-        print("prze import")
         from ursina import *
         from ursina.prefabs.first_person_controller import FirstPersonController
         import ursina.prefabs.memory_counter as EngineMC
         import ursina.prefabs.editor_camera as EngineECAM
+        from ursina.lights import Light as EngineLight
+        from ursina.shaders import lit_with_shadows_shader 
     #Other Packages
         import threading 
         from datetime import datetime
@@ -60,7 +61,6 @@ try:
 except ModuleNotFoundError as error:
     raise Exception(str(error) + " was found")
 
-print("po import")
 window.forced_aspect_ratio = 16/9
 camera.fov = 90
 
@@ -73,7 +73,6 @@ if __name__ == "__main__":
                          # 144Hz == max 144FPS
 else:
     exit()
-print("po deklaracji")
 player = FirstPersonController(position= (0, 50.02, 0), jump_height=0, speed=0)
 
 
@@ -205,16 +204,13 @@ logger.INFO("Window parameters has been updated.")
 
 
 #*----Enemies' Settings:
-enemy_testor = Entity(
-    model='sphere',
-    color=color.rgb(10, 255, 100),
-    scale=1
-)
+enemy_testor = Entity(model='sphere', color=color.rgb(10, 255, 100), scale=1)
 enemy_testor.position = (10, 20, 10)
 logger.DEBUG("Enemy tester entity has been created")
 
 enemies = __bots.SimpleBots(health=10, speed=1, howmuch=5)
 
+DirectionalLight(parent=player, y=2, z=3, shadows=True, rotation=(player.rotation.x, player.rotation.y, player.rotation.z))
 enemiesSpawned = False
 
 #*----Enemies' Settings
@@ -283,7 +279,12 @@ class enemiesTestingAI(threading.Thread):
     def terminate(self):
         self._running = False
 
-
+class OSUpdate(threading.Thread):
+    def run(self):
+        while True:
+            DirectionalLight.rotation = (player.rotation.x, player.rotation.y, player.rotation.z)
+            time.sleep(1)
+OSUpdateThread = OSUpdate.start()
 
 class SimpleBotsKiller(threading.Thread):
     def run(self):

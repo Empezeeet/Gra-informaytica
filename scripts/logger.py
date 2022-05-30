@@ -1,4 +1,10 @@
 #Logging module.
+
+if __name__ == "__main__":
+    raise RuntimeError("This file should be imported")
+
+
+
 sr = True
 
 try:

@@ -5,8 +5,6 @@
 if __name__ == "__main__":
     print("Wrong file")
     raise RuntimeError("Run main.py not bots.py")
-    exit()
-
 
 
 try:

@@ -10,6 +10,8 @@
 # TODO: After randomDeathTime is over, new spawned enemies are not moving (#7)
 #*----PROGRAMMER NOTES
 
+if __name__ != "__main__":
+    raise NameError("This file should not be imported")
 
 
 
@@ -48,9 +50,6 @@ try:
         from ursina import *
         from ursina.prefabs.first_person_controller import FirstPersonController
         import ursina.prefabs.memory_counter as EngineMC
-        import ursina.prefabs.editor_camera as EngineECAM
-        from ursina.lights import Light as EngineLight
-        from ursina.shaders import lit_with_shadows_shader 
     #Other Packages
         import threading 
         from datetime import datetime
@@ -65,14 +64,12 @@ window.forced_aspect_ratio = 16/9
 camera.fov = 90
 
 
-if __name__ == "__main__":
-    app = Ursina(vsync=True, borderless=False, fullscreen=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
-                         #VSync sets maxFramerate to your monitor Hz Value
-                         # 60Hz == max 60FPS
-                         # 75Hz == max 75FPS
-                         # 144Hz == max 144FPS
-else:
-    exit()
+app = Ursina(vsync=True, borderless=False, fullscreen=False) #VSync must be set to True else Game would use More (unnecessary) RAM, CPU, GPU
+                        #VSync sets maxFramerate to your monitor Hz Value
+                        # 60Hz == max 60FPS
+                        # 75Hz == max 75FPS
+                        # 144Hz == max 144FPS
+
 player = FirstPersonController(position= (0, 50.02, 0), jump_height=0, speed=0)
 
 
@@ -210,7 +207,6 @@ logger.DEBUG("Enemy tester entity has been created")
 
 enemies = __bots.SimpleBots(health=10, speed=1, howmuch=5)
 
-DirectionalLight(parent=player, y=2, z=3, shadows=True, rotation=(player.rotation.x, player.rotation.y, player.rotation.z))
 enemiesSpawned = False
 
 #*----Enemies' Settings
@@ -279,12 +275,7 @@ class enemiesTestingAI(threading.Thread):
     def terminate(self):
         self._running = False
 
-class OSUpdate(threading.Thread):
-    def run(self):
-        while True:
-            DirectionalLight.rotation = (player.rotation.x, player.rotation.y, player.rotation.z)
-            time.sleep(1)
-OSUpdateThread = OSUpdate.start()
+
 
 class SimpleBotsKiller(threading.Thread):
     def run(self):
